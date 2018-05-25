@@ -6,12 +6,15 @@
  * and open the template in the editor.
  */
 
-
 /**
- * Description of Modelo-vista-controlador
+ * Description of Controlador
  *
  * @author Omar
  */
-class Modelo-vista-controlador {
-//put your code here
-}
+require_once("Modelo/Citas_Modelo.php");
+$per=new Citas_Modelo();
+$datos=$per->get_Citas();
+ 
+//Llamada a la vista
+require_once("vistas/Citas_Vitas.phtml");
+?>
