@@ -11,7 +11,9 @@
  *
  * @author Omar
  */
-class data-base {
+//aun no esa creada la base de datos por lo cual la classe no funciona
+//cuando la base de datos este diseñada se adaptaran las clases para su correcto funcionamiento
+class data_base{
         public static function conexion(){
         $conexion=new mysqli("localhost", "root", "", "mvc");
         $conexion->query("SET NAMES 'utf8'");
