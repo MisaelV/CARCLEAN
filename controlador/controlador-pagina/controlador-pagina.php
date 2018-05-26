@@ -12,6 +12,6 @@
  *
  * @author VICTOR
  */
-class controlador-pagina {
+class controladorPagina {
 //put your code here
 }
