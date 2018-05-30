@@ -1,14 +1,8 @@
-/*
-    Theme Name: Baker
-    Theme URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-*/
 
 body {
 	line-height: 1.4;
 	font-family: 'Roboto', sans-serif;
-    color: #67696c;
+    color: #61a8ad;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.5px;
@@ -89,7 +83,7 @@ HEADER
 ************************************
 ***********************************/
 .header{
-    background: url('../img/bg-banner02.jpg') no-repeat fixed;
+    background: url('../img/bg-banner.jpg') no-repeat fixed;
     background-size: cover;
     min-height: 650px;
     position: relative;
@@ -121,7 +115,7 @@ HEADER
 
 .logo-dec
 {
-    color: #be9e21;
+    color: #002F2F;
 }
 .navbar-default .navbar-brand {
     color: #fff;
