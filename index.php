@@ -60,7 +60,9 @@ $controlador = new controladorPagina();
                         </nav>
                     </header>
                     <!-- SLOGAN DE LA PAGINA "CARECLEAN"-->
-
+                                      
+                    
+                    
                     <div class="wrapper">
                         <div class="container">
                             <div class="row">
