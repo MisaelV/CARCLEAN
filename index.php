@@ -178,7 +178,7 @@ $controlador = new controladorPagina();
                                 <div class="col-md-3 col-sm-6 col-xs-12">
                                     <div class="service-item">
                                         <img src="vista/page/ImagenesCW/006-servicio-al-cliente.png">
-                                        <h3>Recerva facil.</h3>
+                                        <h3>Reserva facil.</h3>
                                         <p>Lo primero es que tendrá que reservar una cita con nosotros.</p>
 
                                     </div>
