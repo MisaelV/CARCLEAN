@@ -80,8 +80,8 @@ $controlador = new controladorPagina();
                                                             <div class="slide-1"></div>
                                                             <div class="hero">
                                                                 <hgroup>
-                                                                    <h1 >Con careclean siempre tendras tu auto limpio, desde la comodidad de tu hogar u oficina</h1>        
-
+                                                                    <h1 >CON CARCLEAN SIEMPRE TENDRÁS TU AUTO LIMPIO, DESDE LA COMODIDAD DE TU HOGAR U OFICINA.</h1>        
+                                                                    
                                                                 </hgroup>
 
                                                             </div>
@@ -90,7 +90,8 @@ $controlador = new controladorPagina();
                                                             <div class="slide-2"></div>
                                                             <div class="hero">        
                                                                 <hgroup>
-                                                                    <h1>¡OBTEN UN DESCUENTO EN TU PRIMER SERVICIO DE AUTOLAVADO!</h1> 
+                                                                    <h1>¡OBTEN UN DESCUENTO EN TU PRIMER SERVICIO DE AUTOLAVADO!</h1>
+                                                                    <h3>La próxima vez que lavemos tu auto, asegúrate de pedir una tarjeta de miembro del Club de descuentos.</h3>
                                                                 </hgroup>       
 
                                                             </div>
@@ -100,6 +101,15 @@ $controlador = new controladorPagina();
                                                             <div class="hero">        
                                                                 <hgroup>
                                                                     <h1>¡ACUMULA 10 LAVADAS Y LA SIGUIENTE ES GRATIS!</h1>
+                                                                </hgroup>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="item slides">
+                                                            <div class="slide-3"></div>
+                                                            <div class="hero">        
+                                                                <hgroup>
+                                                                    <h1>¡NUESTRO LAVADO DE AUTOS TIENE UNA VARIEDAD DE SERVICIOS DE ALTA CALIDAD QUE LE ENCANTARÁ A SU AUTOMÓVIL (Y SU BILLETERA)!</h1>
                                                                 </hgroup>
 
                                                             </div>
@@ -187,7 +197,7 @@ $controlador = new controladorPagina();
                                     <div class="service-item">
                                         <img src="vista/page/ImagenesCW/007-mantenimiento.png">
                                         <h3>Perfecto Servicio</h3>
-                                        <p>Cuando su auto ya esté en nuestras manos, todo lo que tendrá que hacer es esperar un poco hasta que salga todo brillante y limpio.</p>
+                                        <p>Cuando su auto ya esté en nuestras manos, todo lo que tendrá que hacer es esperar un poco hasta que quede todo brillante y limpio.</p>
 
                                     </div>
                                 </div>
