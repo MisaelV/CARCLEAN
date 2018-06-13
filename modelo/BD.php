@@ -13,7 +13,7 @@
  */
 class BD {
     //conexion con base de datos
-    var $cadena = "mysql:host=127.0.0.1;dbname=";  
+    var $cadena = "mysql:host=127.0.0.1;dbname= ";  
     var $user = "root"; 
     var $password = "";
     var $conn;
