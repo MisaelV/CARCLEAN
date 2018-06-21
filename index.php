@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <?php
-include_once './modelo/BD.php';
-include_once './modelo/modelo-pagina/modelo-pagina.php';
-include_once './controlador/controlador-pagina/controlador-pagina.php';
+
+include_once './modelo/BD.php'; /** se incluye la conexipon a la BD*/
+include_once './modelo/modelo-pagina/modelo-pagina.php'; /** se incluye el modelo*/
+include_once './controlador/controlador-pagina/controlador-pagina.php'; /** se incluye el controlador*/
 /**
   INICIALIZA CONTROLADOR
  */
@@ -12,7 +13,7 @@ $controlador = new controladorPagina();
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>CARECLEAN</title>
+        <title>CARCLEAN</title>
         <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
         <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
@@ -23,11 +24,12 @@ $controlador = new controladorPagina();
         <link rel="stylesheet" type="text/css" href="vista/page/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="vista/page/css/animate.css">
         <link rel="stylesheet" type="text/css" href="vista/page/css/style.css">
+        <link  rel="stylesheet" type="text/css" href="settings/style-web/css.css">
 
     </head>
 
     <body>
-        <!--#025A9  Color de página-->
+        <!--#025A9B  Color de página-->
         <div class="loader"></div>
         <div id="myDiv">
             <!--HEADER-->
@@ -263,30 +265,27 @@ $controlador = new controladorPagina();
                 <div class="modal fade" id="modalIniciarSesion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                            <div class="modal-header" style="background: #0F76Ca  ;  ">
-                                <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
+                            <div class="modal-header colorHeader">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <p style="color: #ffffff;">Inicio de sesion  <i class="pe-7s-plus"></i></p>
+                                <p>Login</p>
                             </div>
-                            <div class="modal-body">
-                                <form method="post" action="app-personal.php">
-                                    <input type="hidden" name="inicioSesion"  value="1">
-                                    <input type="hidden" name="idP" id="idP" value="">
-                                    <div class="container aspirante">
-                                        <div class="row" style="color: red;">
+                            <div class="modal-body colorContainer">
+                                <form method="post" action="">
+                                    <div class="container ">
+                                        <div class="row center-block">
                                             <div class="form-group" style="width:400px;">
                                                 <label>Usuario:</label>                                                
-                                                <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" style="border-color: black; color: black" >
+                                                <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
                                             </div>
                                             <div class="form-group "style="width:400px;">
                                                 <label>Contraseña:</label>
-                                                <input required=""  type="text"  name="contraseña" id="idContraseña" class="form-control" aria-describedby="sizing-addon3"style="border-color: black; color: black">
+                                                <input required=""  type="text"  name="contraseña" id="idContraseña" class="form-control" aria-describedby="sizing-addon3">
                                             </div>
+                                              <div class="form-group col-md-12" >   
+                                            <input type="submit"   value="Log In" class="btn btn-primary" >
                                         </div>
-                                        <div class="form-group center-block" >   
-                                            <input type="submit"   value="Iniciar secion" class="btn btn-success" >
-                                            <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
                                         </div>
                                     </div>
                                 </form>
@@ -294,6 +293,7 @@ $controlador = new controladorPagina();
                         </div>
                     </div>
                 </div>
+                
                 <!---->
                 </body>
                 <script src="vista/page/js/jquery.min.js"></script>
