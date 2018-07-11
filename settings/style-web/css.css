@@ -1,20 +1,68 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 15/06/2018, 12:19:11 AM
-    Author     : VICTOR
-*/
+.b-modal{
+    /*background-image: url("https://thumbs.dreamstime.com/b/blue-color-watercolor-hand-drawn-gradient-banner-paint-wash-94574293.jpg");*/
+    background-size: cover;  
+}
 .colorHeader{
-     background-color: #025A9B;   
+    
+    /*background-color: #025A9B; & color :efefef*/
+    color: black;
+    
+
 }
 .colorContainer {
- background-color: #025A9B;   
-};
+   
+    /*background-color: #efefef;*/
+    color: black;
+    padding-left: 70px;
+    height: 450px;
+}
+.txt{
+    border: solid 1px #efefef;
+    color: black!important;
+    font-size: 30px;
+
+}
+.txt:focus{
+    border: solid 1px black;
+}
+.inicio-sesion{
+    width: 400px;
+    height: 50px;
+    background-color: #ff5c5f;
+    padding-left: 0px;
+    color: white;
+}
+.registro-g{
+    padding-left: 30px;
+    border-top: solid 1px #efefef;
+}
+
+.boton-facebook{
+    background-color: #4568b0;
+    border-bottom-color: #4568b0;
+    width: 400px;
+    height: 50px;
+    color: white;
+}
+.o{
+    padding-left: 200px;
+}
+.boton-google{
+    border-color:  black;
+    background-color: white;
+    color: black;
+    width: 400px;
+    height: 50px;
+}
+.registro-g span{
+    color: #4568b0;
+}
+.registro-g span:hover{
+    color: #4568b0;
+   text-decoration:underline; 
+}
 
 
 
 
-
+/*color FB-4568b0*/

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <?php
-
-include_once './modelo/BD.php'; /** se incluye la conexipon a la BD*/
-include_once './modelo/modelo-pagina/modelo-pagina.php'; /** se incluye el modelo*/
-include_once './controlador/controlador-pagina/controlador-pagina.php'; /** se incluye el controlador*/
+include_once './modelo/BD.php';/** se incluye la conexipon a la BD */
+include_once './modelo/modelo-pagina/modelo-pagina.php';/** se incluye el modelo */
+include_once './controlador/controlador-pagina/controlador-pagina.php';/** se incluye el controlador */
 /**
   INICIALIZA CONTROLADOR
  */
@@ -53,7 +52,9 @@ $controlador = new controladorPagina();
                                     <ul class="nav navbar-nav navbar-right">
                                         <li class="active"><a href="#main-header">INICIO</a></li>
                                         <li class=""><a href="#servicios">SERVICIOS</a></li>
-                                        <li class=""><a href="#beneficios">Beneficios</a></li>
+                                        <li class=""><a href="#beneficios">BENEFICIOS</a></li>
+                                        <li class=""><a href="#Paquetes">PAQUETES</a></li>
+                                        <li class=""><a href="#nosotros">NOSOTROS</a></li>
                                         <li class=""><a href="#modalIniciarSesion" data-toggle="modal" >Inicar Sesion</a></li>
                                     </ul>
                                 </div>
@@ -122,9 +123,7 @@ $controlador = new controladorPagina();
                                                 </div>
 
                                                 <!--boton de registro-->       
-                                                <div class="brn-btn">
-                                                    <a  class=" btn btn-more" href="#modalRegistrarse" data-toggle="modal" > Registrarme</a>
-                                                </div>
+                                                
 
                                                 </section>                                     
                                             </div>
@@ -225,7 +224,191 @@ $controlador = new controladorPagina();
                         </div>
                     </section>
                     <!---->
+                    <!--APARTADO DE PAQUETES-->
+                    <section id="Paquetes" class=" section-padding wow fadeInUp delay-05s fir-paquetes">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <h2 class="service-title pad-bt15 " style="color:#0F76CC ">Paquetes</h2>
+                                </div>
 
+                                <div class="col-md-3 col-sm-6 col-xs-12 paquete">
+                                    <div class="">
+                                        <h1>BASICO</h1>
+                                        <h3>$100.00 MN</h3>
+                                        <br>
+                                        <ul>
+                                            <li><span class="viñeta">•</span>Lavado y Aspirado</li>
+                                            <br>
+                                            <li><span class="viñeta">•</span>Secado con tela Micro-fibra</li>
+                                            <br>                                            
+                                            <li><span class="viñeta">•</span>Limpieza de tablero y consola central</li> 
+                                            <br>
+                                            <li><span class="viñeta">•</span>Eliminacion de olores en su totalidad</li>
+                                            <br>
+                                            <li><span class="viñeta">•</span>Tiempo maximo de espera 50 minutos</li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-xs-12 paquete">
+                                    <div class="service-item">
+                                        <h1>OPTIMO</h1>
+                                        <h3>$150.00 MN</h3>
+                                        <br>
+                                        <ul>
+                                            <li><span class="viñeta">•</span>Lavado y Aspirado</li>
+                                            <br>
+                                            <li><span class="viñeta">•</span>Secado con tela Micro-fibra</li> 
+                                            <br>
+                                            <li><span class="viñeta">•</span>Limpieza de tablero y consola central</li>
+                                            <br>
+                                            <li><span class="viñeta">•</span>Terminado de llantas y rines a mano</li>
+                                            <br>
+                                            <li><span class="viñeta">•</span>Eliminacion de olores en su totalidad</li>
+                                            <br>                                            
+                                            <li><span class="viñeta">•</span>Tiempo Maximo 40 Minutos</li>
+
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-xs-12 paquete">
+                                    <div class="service-item">
+                                        <h1>PRO</h1>
+                                        <h3>$350.00 MN</h3>
+                                        <br>
+                                        <ul>
+                                            <li><span class="viñeta">•</span>Lavado y Aspirado</li>
+                                            <br>
+                                            <li><span class="viñeta">•</span>Secado con tela Micro-fibra</li>
+                                            <br>
+                                            <li><span class="viñeta">•</span>Aplicacion de Cera liquida en el cecado</li>
+                                            <br>
+                                            <li><span class="viñeta">•</span>Limpieza de tablero y consola central a detalle</li>
+                                            <br>
+                                            <li><span class="viñeta">•</span>Terminado de llantas y rines a mano</li>
+                                            <br>
+                                            <li><span class="viñeta">•</span>Eliminacion de olores en su totalidad</li>
+                                            <br>
+                                            <li><span class="viñeta">•</span>Hidratacion de plassticos y asientos de piel</li>
+                                            <br>
+                                            <li><span class="viñeta">•</span>Tiempo Maximo 30 Minutos</li>
+
+
+                                        </ul>
+
+                                    </div>
+                                </div>                               
+                            </div>
+                        </div>
+                    </section>
+                    <!---->
+                    <!--APARTADO MISION VISION Y VALORES.-->
+                    <section id="nosotros" class="section-padding wow fadeInUp delay-05s">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <h2 class="service-title pad-bt15">POLITICAS</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="service-item">                                        
+                                            <h3>Mision.</h3>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="service-item">                                        
+                                            <h3>Vision.</h3>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="service-item">                                        
+                                            <h3>Valores.</h3>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </section>
+                    <!---->
+                    <!--APPI google.-->
+                    <section id="appi" class="section-appi delay-05s">                       
+
+                        <div id="googleMap" style="width:100%;height:350px;"></div>
+
+                        <script>
+                            function myMap() {
+                                var mapProp = {
+                                    center: new google.maps.LatLng(18.493382, -97.412736),
+                                    zoom: 15
+                                };
+                                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                            }
+                        </script>
+
+                        <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBEhFN-RCL131EKWGvxb6i4zifjb-fgt-4&callback=myMap"></script>
+                    </section>
+                    <!---->
+                    <!--APARTADO DE CONTACTO "FOOTER"-->
+                    <section id="contact" class="caja-desc wow fadeInUp delay-05s">
+                        <div class="container">
+                            <div class="row">                        
+                                <!--INFORMACION DE CONTACTO -->
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="loction-info">
+                                        <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Callejón Benito Juárez, #430, Centro, C.P.75700<br>Tehuacan, Puebla, Mexico</p>
+                                        <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>victor.misael@gmai..com</p>
+                                        <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+52 238 102 3760</p>
+                                    </div>
+                                </div>
+                                <!--APARTADO PARA EL FORMULARIO -->
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="contact-form">                                
+                                        <div id="errormessage"></div>
+                                        <form action="" method="post" role="form" class="contactForm">
+                                            <div class="col-md-8 ">
+                                                <div class="form-group">
+                                                    <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Ingresa nombre completo " />
+                                                    <div class="validation"></div>
+                                                </div>
+                                            </div>                                    
+                                            <div class="col-md-8">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Ingresa E-mail" />
+                                                    <div class="validation"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div class="form-group">
+                                                    <textarea class="form-control" name="message" rows="3" data-rule="required" data-msg="Ingresa comebtario" placeholder="Mensaje" style=" border: solid 1px #0F76CC; color: #efefef!important"></textarea>
+                                                    <div class="validation"></div>
+                                                </div>
+                                                <button type="submit" class="boton  btn-submit">Enviar</button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!---->
                     <!--APARTADO DE CONTACTO-->
                     <section id="contact" class="service">
                         <div class="container">
@@ -260,40 +443,54 @@ $controlador = new controladorPagina();
                         </div>
                     </section>
                     <!---->
-                    <!--APARTADO DE MODALES -->
+
+
                 </div>
+                <!--APARTADO DE MODALES -->
                 <div class="modal fade" id="modalIniciarSesion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
-                        <div class="modal-content">
+                        <div class="b-modal modal-content">
                             <div class="modal-header colorHeader">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <p>Login</p>
+                                <p class="log">Login</p>
                             </div>
                             <div class="modal-body colorContainer">
                                 <form method="post" action="">
                                     <div class="container ">
                                         <div class="row center-block">
-                                            <div class="form-group" style="width:400px;">
+                                            <div class=" form-group" style="width:400px;">
                                                 <label>Usuario:</label>                                                
-                                                <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
+                                                <input required="" type="text"   value="" id="idNombre"  name="nombre"  class=" txt form-control" aria-describedby="sizing-addon3" >
                                             </div>
-                                            <div class="form-group "style="width:400px;">
+                                            <div class=" form-group "style="width:400px;">
                                                 <label>Contraseña:</label>
-                                                <input required=""  type="text"  name="contraseña" id="idContraseña" class="form-control" aria-describedby="sizing-addon3">
+                                                <input required=""  type="text"  name="contraseña" id="idContraseña" class=" txt form-control" aria-describedby="sizing-addon3">
                                             </div>
-                                              <div class="form-group col-md-12" >   
-                                            <input type="submit"   value="Log In" class="btn btn-primary" >
+                                            <div class="form-group col-md-12" style="padding-left: 0px;" >   
+                                                <button class="inicio-sesion"><b>Inicar sesion</b> </button>
+                                            </div>
+                                        </div>                                        
+                                        <h5 class="o">Ó</h5>
+                                        <div class="row center-block">                                           
+                                            <button class="boton-facebook"><b>Inicar sesion con Facebook</b> </button>
                                         </div>
+                                        <br>
+                                        <div class="row center-block">                                           
+                                            <button class="boton-google"><b>Inicar sesion con Google</b></button>
                                         </div>
+                                        
                                     </div>
                                 </form>
+                            </div>
+                            <div class=" registro-g modal-header ">                                
+                                <h5>¿No tienes una cuenta? <span class="registro">Registrate</span></h5>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!---->
                 </body>
                 <script src="vista/page/js/jquery.min.js"></script>
