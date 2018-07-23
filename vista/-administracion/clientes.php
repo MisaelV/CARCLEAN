@@ -70,25 +70,20 @@
                     </button>
                     <a class="navbar-brand" href="#">Ver Clientes </a>
                 </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <p>Opciones	<b class="caret"></b>						</p>
-                              </a>
-                              <ul class="dropdown-menu">   
-                                <li class="divider"></li>
-                                <li><a href="#modalAgregar" data-toggle="modal">Agregar</a></li>
-                              </ul>
-                        </li>	
-                        <li class="separator hidden-lg hidden-md"></li>
-                    </ul>
+                 <div class="collapse navbar-collapse">
+                   
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                               <a href="administracion-inicio.html">
+                            <a href="administracion-inicio.html" class="btn btn-default">
                                    <p>Inicio</p>
                             </a>
                         </li>
+                           <li>
+                               <a href="#modalAgregar" data-toggle="modal" class="btn btn-primary">
+                                   <p>Agregar <i class="pe-7s-plus"></i></p>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>

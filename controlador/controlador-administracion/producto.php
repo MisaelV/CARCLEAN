@@ -6,12 +6,14 @@
  * and open the template in the editor.
  */
 
-
 /**
- * Description of controlador-pagina
+ * Description of producto
  *
- * @author Alexis
+ * @author VICTOR
  */
-class controladorPagina {
-//put your code here
+class producto {
+    private $nombre;
+    private $proveedor;
+    private $tipo;
+    private  $empleo;
 }

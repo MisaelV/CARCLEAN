@@ -9,15 +9,17 @@
 /**
  * Description of BD
  *
- * @author VICTOR
+ * @author ALEXIS
  */
 class BD {
     //conexion con base de datos
-    var $cadena = "mysql:host=127.0.0.1;dbname= ";  
+    var $cadena = "mysql:host=127.0.0.1;dbname= carclean";  
     var $user = "root"; 
     var $password = "";
     var $conn;
     var $depuracion = true;
+    
+    //Abre la conexión
     function open() {
         try {
             $this->conn = new PDO($this->cadena, $this->user, $this->password);
@@ -29,10 +31,13 @@ class BD {
             die();
         }
     }
+    
+    //Cierra la conexion
     function CerrarConexion() {
         $this->conn = NULL;
     }
-//$this->bd->ConsultaPreparada("SELECT * FROM tabla WHERE correo=? AND password=? AND tipousuario=?", array($correo, $password, $tipo));
+    
+  //Ests función consulta a partir de la sintaxis que se ingresa en modelo junto con los parametros
     function ConsultaPreparada($sql, $parametros) {
         if ($this->conn == NULL)
             $this->open();
@@ -45,8 +50,10 @@ class BD {
                 echo var_dump($sentencia->errorInfo());
             return null;
         }
+        $this->CerrarConexion(); //cerramos conexion
     }
-//this->bd->InsertarRegistrosPreparada("INSERT INTO tabla (id,campo2) VALUES (?,?)", array($ide, $camp)))
+
+    //Esta función inserta los registros a partir de la sintaxis sql y los parametros agregados en modelo
     public function InsertarRegistrosPreparada($sql, $parametros) {
         if ($this->conn == NULL)
             $this->open();
@@ -59,7 +66,8 @@ class BD {
                 return FALSE;
         }
     }
-//$this->bd->ModificarRegistrosPreparada("UPDATE tabla SET titulo = ? WHERE id = ? AND estatus <> ?", array($nombre, $id, 2)))
+   
+    //Esta funcion modifica los registros en la base de datos a  partir de la sintaxis y parametros agregados en modelo
     public function ModificarRegistrosPreparada($sql, $parametros) {
         if ($this->conn == NULL)
             $this->open();
@@ -72,8 +80,10 @@ class BD {
             // echo var_dump($sentencia->errorInfo());
                 return FALSE;
         }
+        $this->CerrarConexion();//cerramos conexion
     }
-    //$this->EliminarRegistro("DELETE FROM granja WHERE id_granja=?", array($id));
+    
+    //Esta funcion elimina los registros en la base de datos a partir de la sintaxis y parametros insertados en modelo
         public function EliminarRegistro($sql,$parametros) {
         if ($this->conn == NULL)
             $this->open();
@@ -85,10 +95,13 @@ class BD {
             // echo var_dump($sentencia->errorInfo());
                 return FALSE;
         }
+        $this->CerrarConexion();//cerramos conexion
     }
+    
+    //Esta función consulta a partir de la tabla agregada en modelo y los parametros
     function ConsultaAsociativaOrdenada($tabla, $parametros) {
         if ($this->conn == NULL)
-            $this->open();
+            $this->open(); //abre la conexión
         $sentencia = $this->conn->prepare("SELECT *FROM " . $tabla);
         if ($sentencia->execute($parametros)) {
             return $sentencia->fetchAll(PDO::FETCH_ASSOC);
@@ -97,6 +110,7 @@ class BD {
                 echo var_dump($sentencia->errorInfo());
             return null;
         }
+        
     }
 }
 ?>

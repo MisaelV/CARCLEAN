@@ -10,8 +10,23 @@
 /**
  * Description of modelo-administracion
  *
- * @author VICTOR
+ * @author Alexis
  */
 class modeloAdministracion {
-//put your code here
+    //Funcion agregar cliente a la base de datos
+    public function agregarCliente($param) {
+        
+    }
+    //Funcion agregar lavador a la base de datos
+     public function agregarLavador($param) {
+        
+    }
+    //Funcion agregar producto a la base de datos 
+     public function agregarProducto($param) {
+        
+    }
+    //Funcion agregar servicio a la base de datos
+     public function agregarServicio($param) {
+        
+    }
 }
