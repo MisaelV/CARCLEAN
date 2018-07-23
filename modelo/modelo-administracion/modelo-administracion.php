@@ -14,8 +14,8 @@
  */
 class modeloAdministracion extends BD {
     //Funcion agregar cliente a la base de datos
-    public function agregarCliente($param) {
-        
+    public function agregarCliente($nombre,$apellidos,$email,$telefono,$fecha) {
+        $this->InsertarRegistrosPreparada("INSERT INTO clientes (nombre, apellidos, email, telefono, fecha_alta)", array($nombre,$apellidos,$email,$telefono,$fecha));
     }
     //Funcion agregar lavador a la base de datos
      public function agregarLavador($param) {

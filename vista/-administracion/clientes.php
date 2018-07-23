@@ -1,3 +1,9 @@
+<?php 
+include_once '../../modelo/BD.php';
+include_once '../../controlador/controlador-administracion/controlador-administracion.php';
+include_once '../../modelo/modelo-administracion/modelo-administracion.php';
+$controlador = new controladorAdministracion();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -176,8 +182,8 @@ vhv
                         <p style="color: #ffffff;">Agregar Cliente<i class="pe-7s-plus"></i></p>
                     </div>
                     <div class="modal-body ">
-                        <form method="post" action="app-personal.php">
-                            <input type="hidden" name="modificarPersonal"  value="1">
+                        <form method="post" action="clientes.php">
+                            <input type="hidden" name="agregarCliente"  value="1">
                                 <input type="hidden" name="idP" id="idP" value="">
                                      <div class="container aspirante">
                         <div class="row">
@@ -185,38 +191,22 @@ vhv
                                     <label>Nombre Completo:</label>
                                     <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
                                 </div>
-                                <div class="form-group "style="width:570px;">
-                                    <label>Dirección:</label>
-                                    <input required=""  type="text"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
-                                    </div>
+                              <div class="form-group" style="width:570px;">
+                                    <label>Apellidos:</label>
+                                    <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
+                                </div>
                           
                                      <div class="form-group" style="width:570px;">
                                     <label>Email:</label>
-                                    <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
+                                    <input required="" type="email"   value="" id="idNombre"  name="email"  class="form-control" aria-describedby="sizing-addon3" >
+                                </div>
+                            <div class="form-group" style="width:570px;">
+                                    <label>Fecha:</label>
+                                    <input required="" type="date"   value="" id="idNombre"  name="email"  class="form-control" aria-describedby="sizing-addon3" >
                                 </div>
                                 <div class="form-group "style="width:570px;">
                                     <label>Telefono:</label>
-                                    <input required=""  type="text"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
-                                    </div>
-                             </div>
-                                           <label>Datos del automóvil:</label>
-                                           <div class="row">
-                                <div class="form-group" style="width:570px;">
-                                    <label>Marca:</label>
-                                    <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
-                                </div>
-                                <div class="form-group "style="width:570px;">
-                                    <label>Modelo:</label>
-                                    <input required=""  type="text"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
-                                    </div>
-                          
-                                     <div class="form-group" style="width:570px;">
-                                    <label>Color:</label>
-                                    <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
-                                </div>
-                                <div class="form-group "style="width:570px;">
-                                    <label>Placas:</label>
-                                    <input required=""  type="text"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
+                                    <input required=""  type="text"  name="" id="itelefono" idPuesto" class="form-control" aria-describedby="sizing-addon3">
                                     </div>
                              </div>
                                        

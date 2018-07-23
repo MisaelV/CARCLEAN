@@ -1,8 +1,8 @@
 <?php
 include_once '../../modelo/BD.php';
-include_once '../../modelo/modelo-administracion/modelo-administracion.php';
 include_once '../../controlador/controlador-administracion/controlador-administracion.php';
-$constructor = new controladorAdministracion();
+include_once '../../modelo/modelo-administracion/modelo-administracion.php';
+$controlador = new controladorAdministracion();
 ?>
 <html lang="en">
 <head>
@@ -144,9 +144,9 @@ $constructor = new controladorAdministracion();
                         </button>
                         <p style="color: #ffffff;">Agregar Producto  <i class="pe-7s-plus"></i></p>
                     </div>
-                    <form method="post" action="inventario.php">
+                    <form method="POST" action="inventario.php">
                         <div class="modal-body">
-                                                      
+                            <input type="hidden" name="agregar" value="1">
                             <div class="form-group">
                                 <label for="name" class="col-form-label">Nombre Prodcuto:</label>
                                 <input required="" type="text"   value="" id="idNombre"  name="name"  class="form-control" aria-describedby="sizing-addon3" >
