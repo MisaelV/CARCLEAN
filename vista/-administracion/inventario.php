@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+include_once '../../modelo/BD.php';
+include_once '../../modelo/modelo-administracion/modelo-administracion.php';
+include_once '../../controlador/controlador-administracion/controlador-administracion.php';
+$constructor = new controladorAdministracion();
+?>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
@@ -139,29 +144,26 @@
                         </button>
                         <p style="color: #ffffff;">Agregar Producto  <i class="pe-7s-plus"></i></p>
                     </div>
-                    <form method="post" action="app-personal.php">
-                    <div class="modal-body">
-                            <input type="hidden" name="modificarPersonal"  value="1">
-                                <input type="hidden" name="idP" id="idP" value="">
-                            <input type="hidden" name="modificarPersonal"  value="1">
-                                <input type="hidden" name="idP" id="idP" value="">
-                                <div class="form-group">
-                                    <label for="name" class="col-form-label">Nombre Prodcuto:</label>
-                                    <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
-                                </div>
+                    <form method="post" action="inventario.php">
+                        <div class="modal-body">
+                                                      
+                            <div class="form-group">
+                                <label for="name" class="col-form-label">Nombre Prodcuto:</label>
+                                <input required="" type="text"   value="" id="idNombre"  name="name"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
                             <div class="form-group ">
                                 <label for="proveedor" class="col-form-label">Proveedor:</label>
-                                    <input required=""  type="text"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
-                                    </div>
+                                <input required=""  type="text"  name="proveedor" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
+                            </div>
                             <div class="form-group ">
                                 <label for="canridad" class="col-form-label">Cantidad:</label>
-                                    <input required=""  type="number"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
-                                    </div>
-                             </div>
-                              <div class="modal-footer" >   
-                                <input type="submit"   value="Aceptar" class="btn btn-success">
-                                <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
+                                <input required=""  type="text"  name="cantidad" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
                             </div>
+                        </div>
+                        <div class="modal-footer" >   
+                            <input type="submit"   value="Aceptar" class="btn btn-success">
+                            <button value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" > </button>
+                        </div>
                     </form>
                 </div>
                 </div>

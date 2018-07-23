@@ -16,10 +16,7 @@ class controladorAdministracion {
 private $modelo;
 public function _construc(){
     $this->modelo= new modeloAdministracion();
-    
-    //Iinicio 'agregarWasher'
-    //Termina 'agregarWasher'
-    
+
     //Inicia agregarWasher
     if (isset($_POST['agregarWasher'])){
                   $nombre=$_POST["nombre"];
@@ -74,9 +71,15 @@ public function _construc(){
             }
         }
    //Termina agregarProducto
-    
-    
-    
+        
+        if(isset($_POST['name'])){
+            $nombre=$_POST['name'];
+            $cantidad=$_POST['cantidad'];
+            $proveedor=$_POST['proveedor'];
+            var_dump();
+            $this->modelo->agregarProducto($nombre,$cantidad,$proveedor);
+        }
+        
     
     if(isset($_POST['eliminarWasher'])){
         $this->modelo->eliminarWasher($_POST['id']);

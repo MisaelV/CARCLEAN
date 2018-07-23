@@ -12,7 +12,7 @@
  *
  * @author Alexis
  */
-class modeloAdministracion {
+class modeloAdministracion extends BD {
     //Funcion agregar cliente a la base de datos
     public function agregarCliente($param) {
         
@@ -22,8 +22,8 @@ class modeloAdministracion {
         
     }
     //Funcion agregar producto a la base de datos 
-     public function agregarProducto($param) {
-        
+     public function agregarProducto($nombreProducto,$cantidad,$proveedor) {
+         $this->InsertarRegistrosPreparada("INSERT INTO productos(nombreProducto,cantidad,proveedor) VALUES(?,?,?)", array($nombreProducto,$cantidad,$proveedor));    
     }
     //Funcion agregar servicio a la base de datos
      public function agregarServicio($param) {
