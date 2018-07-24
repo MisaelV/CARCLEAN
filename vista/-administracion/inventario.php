@@ -56,15 +56,15 @@ $controlador = new controladorAdministracion();
                         </li>
                         <li class="active-pro">
                             <a href="index.php">
-                        <i class="pe-7s-power"></i>
-                        <p>Salir</p>
-                    </a>
-                </li>
-                    </ul>
-    	</div>
+                                <i class="pe-7s-power"></i>
+                                <p>Salir</p>
+                            </a>
+                        </li>
+           </ul>
+        </div>
     </div>
     <div class="main-panel">
-		<nav class="navbar navbar-default navbar-fixed">
+        <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
@@ -76,23 +76,23 @@ $controlador = new controladorAdministracion();
                     <a class="navbar-brand" href="#">Catálogo de productos</a>
                 </div>
                 <div class="collapse navbar-collapse">
-                   
+
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="administracion-inicio.html" class="btn btn-default">
-                                   <p>Inicio</p>
+                                <p>Inicio</p>
                             </a>
                         </li>
-                           <li>
-                               <a href="#modalAgregar" data-toggle="modal" class="btn btn-primary">
-                                   <p>Agregar <i class="pe-7s-plus"></i></p>
+                        <li>
+                            <a href="#modalAgregar" data-toggle="modal" class="btn btn-primary">
+                                <p>Agregar <i class="pe-7s-plus"></i></p>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-                     <div class="content">
+        <div class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
@@ -104,23 +104,38 @@ $controlador = new controladorAdministracion();
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
-                                         <th>ID</th>
-                                        <th>Producto</th>
-                                    	<th>Cantidad</th>
-                                    	<th>Proveedor</th>
+                                    <th>ID</th>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Proveedor</th>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                        	<td>2</td>
-                                        	<td>Líquido limpiador</td>
-                                        	<td>12</td>
-                                        	<td>CARCLEAN</td>
-                                        	<td><a href="#modalEliminar" data-toggle="modal" style="color: red;">Eliminar</a>  <a href="#modalModificar" data-toggle="modal">Modificar</a></td>
+                                            <td>2</td>
+                                            <td>Líquido limpiador</td>
+                                            <td>12</td>
+                                            <td>CARCLEAN</td>
+                                            <td class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                                                    <b class="caret hidden-sm hidden-xs"></b>
+                                                    <span class="notification hidden-sm hidden-xs">Opciones</span>
+                                                    <p class="hidden-lg hidden-md">
+                                                        
+                                                        <b class="caret"></b>
+                                                    </p>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#modalModificar" data-toggle="modal">Modificar</a></li>
+                                                    <li><a href="#modalEliminar" data-toggle="modal">Eliminar</a></li>
+
+                                                </ul>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
-                </div>
-            </div>
+                            </div>
+                        </div>
         </div>
     </div>
 </div>
@@ -135,7 +150,10 @@ $controlador = new controladorAdministracion();
     </div>
 </div>
     
-     <div class="modal fade" id="modalAgregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <!--VENTANAS EMERGENTES-->
+    
+    <!--Codigo para la ventana emergente de agregar-->
+    <div class="modal fade" id="modalAgregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header" style="background: #025A9B  ;  ">
@@ -144,7 +162,7 @@ $controlador = new controladorAdministracion();
                         </button>
                         <p style="color: #ffffff;">Agregar Producto  <i class="pe-7s-plus"></i></p>
                     </div>
-                    <form method="POST" action="inventario.php">
+                    <form method="POST" action="inventario.php" enctype="multipart/form-data">
                         <div class="modal-body">
                             <input type="hidden" name="agregar" value="1">
                             <div class="form-group">
@@ -159,6 +177,22 @@ $controlador = new controladorAdministracion();
                                 <label for="canridad" class="col-form-label">Cantidad:</label>
                                 <input required=""  type="text"  name="cantidad" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
                             </div>
+                            <div class="form-group">
+                                <label for="">imagen</label>
+                                <div class="card">
+                                    <div class="card-block">
+                                        <h3 class="card-title">Imagen</h3> 
+                                        <output id="list" >
+                                            
+                                        </output>
+                                    </div>
+                                </div>
+                                <label for="" class="col-form-label btn btn-default center-block">
+                                    Subir Archivo
+                                    <input class="btn btn-file form-control"type="file" id="files"  name="imagen"> 
+                                </label>
+                                
+                            </div>
                         </div>
                         <div class="modal-footer" >   
                             <input type="submit"   value="Aceptar" class="btn btn-success">
@@ -168,31 +202,31 @@ $controlador = new controladorAdministracion();
                 </div>
                 </div>
             </div>
-       
+    <!--Codigo para la ventana emergente de modificar-->
     <div class="modal fade" id="modalModificar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header" style="background: #85099B;  ">
+                    <div class="modal-header" style="background: scrollbar;  ">
                         <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <p style="color: #ffffff;">Modificar Producto  <i class="pe-7s-plus"></i></p>
+                        <p style="color: black;">Modificar Producto  <i class="pe-7s-tools"></i></p>
                     </div>
                       <form method="post" action="app-personal.php">
                     <div class="modal-body">
                             <input type="hidden" name="modificarPersonal"  value="1">
                                 <input type="hidden" name="idP" id="idP" value="">
                                 <div class="form-group">
-                                    <label for="name" class="col-form-label">Nombre Prodcuto:</label>
-                                    <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >s
+                                    <label for="name" class="col-form-label">Nombre del producto:</label>
+                                    <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
                                 </div>
                             <div class="form-group ">
                                 <label for="proveedor" class="col-form-label">Proveedor:</label>
                                     <input required=""  type="text"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
                                     </div>
                             <div class="form-group ">
-                                <label for="canridad" class="col-form-label">Cantidad:</label>
-                                    <input required=""  type="number"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
+                                <label for="cantidad" class="col-form-label">Cantidad:</label>
+                                    <input required=""  type="text"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
                                     </div>
                              </div>
                               <div class="modal-footer" >   
@@ -203,22 +237,21 @@ $controlador = new controladorAdministracion();
                     </div>
                 </div>
             </div>
-        </div>
-         </div>
-       <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <!--Codigo para la ventana emergente de eliminar-->
+    <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header" style="background: #DF3C04;  ">
                         <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <p style="color: #ffffff;">Eliminar Producto  <i class="pe-7s-plus"></i></p>
+                        <p style="color: #ffffff;">Eliminar Producto  <i class="pe-7s-trash"></i></p>
                     </div>
                     <div class="modal-body">
                         <form method="post" action="app-personal.php">
                             <input type="hidden" name="modificarPersonal"  value="1">
                                 <input type="hidden" name="idP" id="idP" value="">
-                            <p>¿Desea realmente elminar este producto?</p>
+                            <p>¿Desea realmente eliminar este producto?</p>
                                  <div class="modal-footer" >   
                                 <input type="submit"   value="Aceptar" class="btn btn-success">
                                 <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
@@ -229,10 +262,12 @@ $controlador = new controladorAdministracion();
             </div>
         </div>
 </body>
+<script src="../../controlador/controlador-administracion/funciones.js" type="text/javascript"></script>
 <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/js/chartist.min.js"></script>
 <script src="assets/js/bootstrap-notify.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
 </html>

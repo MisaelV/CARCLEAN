@@ -24,8 +24,7 @@ public function __construct() {
         $email=$_POST["email"];
         $fecha=$_POST["fecha"];
         $this->modelo->agregarCliente($nombre,$apellidos,$email,$telefono,$fecha);
-        var_dump($apellidos);
-        die();
+        unset($_POST);
     }
     if (isset($_POST['agregarWasher'])){
                   $nombre=$_POST["nombre"];
@@ -80,15 +79,52 @@ public function __construct() {
             }
         }
    //Termina agregarProducto
-        
+         //INICIA AGREGAR INVENTARIO
         if(isset($_POST['agregar']))
             {
             $nombre=$_POST['name'];
             $cantidad=$_POST['cantidad'];
             $proveedor=$_POST['proveedor'];
-            $this->modelo->agregarProducto($nombre,$cantidad,$proveedor);
-             header("location:index.php");
+            define('LIMITE', 5000000);
+            define('ARREGLO', serialize(array('image/jpg', 'image/jpeg', 'image/gif', 'image/png')));
+            $PERMITIDOS = unserialize(ARREGLO);
+            
+            if($_FILES["imagen"]["error"]>0){
+                 echo'<script type="text/javascript">
+                        alert("Error de FILE Selecciona un Archivo");
+                        window.location="inventario.php"
+                        </script>';
+            }else{
+                if(in_array($_FILES['imagen']['type'], $PERMITIDOS) && $_FILES['imagen']['size']<= LIMITE * 1024){
+                    $rutaEnServidor = "../../vista/-administracion/assets/img/".$_FILES['imagen']['name'];
+                    $ruta = "http://localhost/CARCLEAN/vista/-administracion/assets/img/". $_FILES['imagen']['name'];
+                if(!file_exists($ruta)){
+                    $resultado = move_uploaded_file($_FILES['imagen']['tmp_name'], $rutaEnServidor);
+                    if($resultado){
+                       $this->modelo->agregarProducto($nombre,$cantidad,$proveedor,$ruta);
+                    }
+                }
+            }
+            }
+            
         }
+        
+        //TERMINA AGREGAR INVENTARIO
+        
+        //INICIA AGREGAR SERVICIO
+        if(isset($_POST['agregarservicio'])){
+            $cliente = $_POST['cliente'];
+            $automovil= $_POST['automovil'];
+            $direccion = $_POST['direccion'];
+            $tipo_lavado = $_POST['tipo_lavado'];
+            $lavador = $_POST['lavador'];
+            $precio = $_POST['precio'];
+            
+            $this->modelo->agregarServicio($cliente, $automovil, $direccion, $tipo_lavado, $lavador, $precio);
+            
+        }
+       
+        //TERMINA EL DE AGREGAR SERVICIO
         
     
     if(isset($_POST['eliminarWasher'])){
@@ -96,5 +132,6 @@ public function __construct() {
     }
 }
 
+   
 
 }
