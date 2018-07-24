@@ -158,13 +158,13 @@ $controlador = new controladorAdministracion();
                 <div class="modal-content">
                     <div class="modal-header" style="background: #025A9B  ;  ">
                         <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true" >&times;</span>
                         </button>
                         <p style="color: #ffffff;">Agregar Producto  <i class="pe-7s-plus"></i></p>
                     </div>
                     <form method="POST" action="inventario.php" enctype="multipart/form-data">
                         <div class="modal-body">
-                            <input type="hidden" name="agregar" value="1">
+                            <input type="hidden" name="agregarInventario" value="1">
                             <div class="form-group">
                                 <label for="name" class="col-form-label">Nombre Prodcuto:</label>
                                 <input required="" type="text"   value="" id="idNombre"  name="name"  class="form-control" aria-describedby="sizing-addon3" >
@@ -208,7 +208,7 @@ $controlador = new controladorAdministracion();
                 <div class="modal-content">
                     <div class="modal-header" style="background: scrollbar;  ">
                         <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true" style="color:#000;">&times;</span>
                         </button>
                         <p style="color: black;">Modificar Producto  <i class="pe-7s-tools"></i></p>
                     </div>

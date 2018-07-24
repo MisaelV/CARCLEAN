@@ -130,7 +130,7 @@ $controlador = new controladorAdministracion();
                                                     <ul class="dropdown-menu">
                                                         <li><a href="#modalModificar" data-toggle="modal">Modificar</a></li>
                                                         <li><a href="#modalEliminar" data-toggle="modal">Eliminar</a></li>
-                                                        <li><a href="#modalCoche" data-toggle="modal">Agregar Coche</a></li>
+                                                        <li><a href="#modalAgregarCoche" data-toggle="modal">Agregar Coche</a></li>
                                                     </ul>
                                                 </td>
                                             </tr
@@ -153,113 +153,104 @@ $controlador = new controladorAdministracion();
     </div>
     <!--VENTANAS EMERGENTES--> 
     
-    <!--Codigo para la ventana emergente de agregar-->
+    <!--Inicia modal agregar -->
     <div class="modal fade" id="modalAgregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header" style="background: #025A9B ;  ">
+                    <div class="modal-header" style="background: #025A9B  ;  ">
                         <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <p style="color: #ffffff;">Agregar Cliente<i class="pe-7s-plus"></i></p>
+                        <p style="color: #ffffff;">Agregar Cliente  <i class="pe-7s-plus"></i></p>
                     </div>
-                    <div class="modal-body ">
-                        <form method="post" action="clientes.php">
-                            <input type="hidden" name="agregarCliente"  value="1">
-                                <input type="hidden" name="idP" id="idP" value="">
-                                     <div class="container aspirante">
-                        <div class="row">
-                                <div class="form-group" style="width:570px;">
-                                    <label>Nombre Completo:</label>
-                                    <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
-                                </div>
-                              <div class="form-group" style="width:570px;">
-                                    <label>Apellidos:</label>
-                                    <input required="" type="text"   value="" id="idNombre"  name="apellidos"  class="form-control" aria-describedby="sizing-addon3" >
-                                </div>
-                          
-                                     <div class="form-group" style="width:570px;">
-                                    <label>Email:</label>
-                                    <input required="" type="email"   value="" id="idNombre"  name="email"  class="form-control" aria-describedby="sizing-addon3" >
-                                </div>
-                            <div class="form-group" style="width:570px;">
-                                    <label>Fecha:</label>
-                                    <input required="" type="date"   value="" id="idNombre"  name="fecha"  class="form-control" aria-describedby="sizing-addon3" >
-                                </div>
-                                <div class="form-group "style="width:570px;">
-                                    <label>Telefono:</label>
-                                    <input required=""  type="text"  name="telefono" id="itelefono" class="form-control" aria-describedby="sizing-addon3">
-                                    </div>
-                             </div>
-                                       
-                                         <div class="form-group center-block" >   
-                                <input type="submit"   value="Aceptar" class="btn btn-success">
-                                <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
+                    <form method="post" action="washer.php" enctype="multipart/form-data">
+                        <div class="modal-body ">
+                            <input type="hidden" name="agregarWasher"  value="1">
+                            <div class="form-group col-lg-12">
+                                <label for="name" class="col-form-label" >Nombre Completo:</label>
+                                <input required="" type="text"   value="" id="wNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
-                    </div>
-                            </form>
+                            <div class="form-group col-lg-12">
+                                <label for="name" class="col-form-label" >Apellidos:</label>
+                                <input required="" type="text"   value="" id="wNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label for="year old" class="col-form-label">Email</label>
+                                <input required="" type="email"   value="" id="wNacimiento"  name="fnacimiento"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="telefone" class="col-form-label">Teléfono:</label>
+                                <input required="" type="tel"   value="" id="wTelefono"  name="telefono"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
+                            <div class="form-group col-lg-6" >
+                                <label for="email" class="col-form-label">Fecha:</label>
+                                <input required="" type="date"   value="" id="idNombre"  name="email"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div> 
+                         
+                            
+                        </div>
+                        <br>
+                        <div class="modal-footer ">
+                            <input type="submit"   value="Aceptar" class="btn btn-success">
+                            <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-         </div>
     
      <!--Codigo para la ventana emergente de agregar coche-->
-    <div class="modal fade" id="modalCoche" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalAgregarCoche" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header" style="background: #025A9B ;  ">
+                    <div class="modal-header" style="background: #025A9B  ;  ">
                         <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <p style="color: #ffffff;">Agregar Automovil<i class="pe-7s-plus"></i></p>
+                        <p style="color: #ffffff;">Agregar Coche  <i class="pe-7s-plus"></i></p>
                     </div>
-                    <form method="post" action="clientes.php">
-                    <div class="modal-body ">
-                        
+                    <form method="post" action="clientes.php" enctype="multipart/form-data">
+                        <div class="modal-body ">
                             <input type="hidden" name="agregarCoche"  value="1">
-                                <input type="hidden" name="idP" id="idP" value="">
-                                     <div class="container aspirante">
-                       
-                                <div class="form-group">
-                                    <label class="col-form-label">Marca:</label>
-                                    <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
-                                </div>
-                              <div class="form-group" >
-                                    <label class="col-form-label">Modelo:</label>
-                                    <input required="" type="text"   value="" id="idNombre"  name="apellidos"  class="form-control" aria-describedby="sizing-addon3" >
-                                </div>
-                          
-                                     <div class="form-group" >
-                                    <label class="col-form-label">Color:</label>
-                                    <input required="" type="color"   value="" id="idNombre"  name="email"  class="form-control" aria-describedby="sizing-addon3" >
-                                </div>
-                            <div class="form-group">
-                                    <label class="col-form-label">Fecha:</label>
-                                    <input required="" type="date"   value="" id="idNombre"  name="fecha"  class="form-control" aria-describedby="sizing-addon3" >
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-form-label">Telefono:</label>
-                                    <input required=""  type="text"  name="telefono" id="itelefono" class="form-control" aria-describedby="sizing-addon3">
-                                    </div>
-                             </div>
-                                       
-                                         <div class="form-group center-block" >   
-                                <input type="submit"   value="Aceptar" class="btn btn-success">
-                                <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
+                            <div class="form-group col-lg-12">
+                                <label for="name" class="col-form-label">Marca:</label>
+                                <input required="" type="text"   value="" id="wNombre"  name="marca"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
-                    </div>
-                            </form>
+                            <div class="form-group col-lg-12">
+                                <label for="name" class="col-form-label" >Modelo:</label>
+                                <input required="" type="text"   value="" id="wNombre"  name="modelo"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="year old" class="col-form-label">Color:</label>
+                                <input required="" type="text"   value="" id="wNacimiento"  name="color"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="telefone" class="col-form-label">Tipo:</label>
+                                <input required="" type="text"   value="" id="wTelefono"  name="tipo"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
+                            <div class="form-group col-lg-12" >
+                                <label for="email" class="col-form-label">Placas:</label>
+                                <input required="" type="text"   value="" id="idNombre"  name="placas"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div> 
+                            <input type="hidden" name="id_cliente"  value="1">
+                            
+                        </div>
+                        <div class="modal-footer ">
+                            
+                            <input type="submit"   value="Aceptar" class="btn btn-success">
+                            <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-        
+        </div>  
     <!--Codigo para la ventana emergente de modificar-->
     <div class="modal fade" id="modalModificar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header" style="background: scrollbar;  ">
                         <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true" style="color:#000;" >&times;</span>
                         </button>
                         <p style="color: black;">Modificar Cliente  <i class="pe-7s-tools"></i></p>
                     </div>
@@ -297,26 +288,27 @@ $controlador = new controladorAdministracion();
     <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header" style="background: #DF3C04;  ">
+                    <div class="modal-header" style="background: #C80000  ;  ">
                         <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <p style="color: #ffffff;">Eliminar Cliente  <i class="pe-7s-trash"></i></p>
+                        <p style="color: #ffffff;">Eliminar Cliente  <i class="pe-7s-delete-user"></i></p>
                     </div>
-                    <div class="modal-body">
                         <form method="post" action="app-personal.php">
+                              <div class="modal-body">
                             <input type="hidden" name="modificarPersonal"  value="1">
-                                <input type="hidden" name="idP" id="idP" value="">
-                            <p>¿Desea realmente eliminar a este cliente?</p>
-                                 <div class="modal-footer" >   
-                                <input type="submit"   value="Aceptar" class="btn btn-success">
-                                <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
+                            <input type="hidden" name="idP" id="idP" value="">
+                                    <p>¿Desea realmente eliminar este cliente?</p>
+                                <div class="modal-footer" >   
+                                    <input type="submit"   value="Aceptar" class="btn btn-success">
+                                    <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
                                 </div>
+                            </div>
+                              </div>
+                        </form>
                     </div>
-                            </form>
                 </div>
-            </div>
-        </div>
+    
 </body>
 <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>

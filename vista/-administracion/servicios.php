@@ -150,121 +150,127 @@ $controlador = new controladorAdministracion();
             </footer>
         </div>
     </div>
-    <!--VENTANAS EMERGENTES-->
-    <!--CODIGO DE VENTANA EMERGENTE PARA AGREGAR-->
+    <!--VENTANAS EMERGENTES--> 
+    
+    <!--Inicia modal agregar -->
     <div class="modal fade" id="modalAgregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background: #025A9B  ;  ">
-                    <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <p style="color: #ffffff;">Agregar Servicio  <i class="pe-7s-plus"></i></p>
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="servicios.php">
-                        <div class="container aspirante">
-                            <div class="row">
-                                <input type="hidden" value="1" name="agregarservicio" >
-                                <div class="form-group" style="width:570px;">
-                                    <label>Cliente:</label>
-                                    <input required="" type="text"   value="" id=""  name="cliente"  class="form-control" aria-describedby="sizing-addon3" >
-                                </div>
-                                <div class="form-group "style="width:570px;">
-                                    <label>Automóvil:</label>
-                                    <input required=""  type="text"  name="automovil" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
-                                </div>
-                                <div class="form-group "style="width:570px;">
-                                    <label>Dirección:</label>
-                                    <input required=""  type="text"  name="direccion" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
-                                </div>
-                                <div class="form-group "style="width:570px;">
-                                    <label>Tipo de lavado:</label>
-                                    <input required=""  type="text"  name="tipo_lavado" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
-                                </div>
-                                <div class="form-group "style="width:570px;">
-                                    <label>Lavador:</label>
-                                    <input required=""  type="text"  name="lavador" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
-                                </div>
-                                <div class="form-group "style="width:570px;">
-                                    <label>Precio:</label>
-                                    <input required=""  type="text"  name="precio" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
-                                </div>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background: #025A9B  ;  ">
+                        <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <p style="color: #ffffff;">Agregar Servicio  <i class="pe-7s-plus"></i></p>
+                    </div>
+                    <form method="post" action="servicios.php" enctype="multipart/form-data">
+                        <div class="modal-body ">
+                            <input type="hidden" name="agregarservicio"  value="1">
+                            <div class="form-group col-lg-12">
+                                <label for="name" class="col-form-label">Cliente:</label>
+                                <input required="" type="text"   value="" id="wNombre"  name="cliente"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
-                            <div class="form-group center-block" >   
-                                <input type="submit"   value="Aceptar" class="btn btn-success">
-                                <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
+                            <div class="form-group col-lg-12">
+                                <label for="name" class="col-form-label" >Automovil:</label>
+                                <input required="" type="text"   value="" id="wNombre"  name="automovil"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
+                            <div class="form-group col-lg-12">
+                                <label for="year old" class="col-form-label">Direccion</label>
+                                <input required="" type="text"   value="" id="wNacimiento"  name="direccion"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="telefone" class="col-form-label">Tipo de Lavado:</label>
+                                <input required="" type="text"   value="" id="wTelefono"  name="tipo_lavado"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
+                            <div class="form-group col-lg-5" >
+                                <label for="email" class="col-form-label">Lavador:</label>
+                                <input required="" type="text"   value="" id="idNombre"  name="lavador"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div> 
+                             <div class="form-group col-lg-3" >
+                                <label for="email" class="col-form-label">Precio:</label>
+                                <input required="" type="text"   value="" id="idNombre"  name="precio"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div> 
+                        </div>
+                        <br>
+                        <div class="modal-footer ">
+                            <input type="submit"   value="Aceptar" class="btn btn-success">
+                            <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
-    <!--CODIGO DE VENTANA EMERGENTE PARA MODIFICAR-->
+    <!--Codigo para la ventana emergente de modificar-->
     <div class="modal fade" id="modalModificar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background: #85099B;  ">
-                    <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <p style="color: #ffffff;">Modificar Servicio  <i class=""></i></p>
-                </div>
-                <div class="modal-body">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background: white;  ">
+                        <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="color: #000;">&times;</span>
+                        </button>
+                        <p style="color: black;">Modificar Washer <i class="pe-7s-tools"></i></p>
+                    </div>
                     <form method="post" action="app-personal.php">
-                        <input type="hidden" name="modificarPersonal"  value="1">
-                        <input type="hidden" name="idP" id="idP" value="">
-                        <div class="container aspirante">
-                            <div class="row">
-
-                                <div class="form-group "style="width:570px;">
-                                    <label>Precio:</label>
-                                    <input required=""  type="text"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
-                                </div>
-                                <div class="form-group "style="width:570px;">
-                                    <label>Lavador:</label>
-                                    <input required=""  type="number"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
-                                </div>
+                        <div class="modal-body">
+                            <input type="hidden" name="modificarPersonal"  value="1">
+                            <input type="hidden" name="idP" id="idP" value="">
+                            <div class="form-group ">
+                                <label for="name" class="col-form-label" >Cliente:</label>
+                                <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
-                            <div class="form-group center-block" >   
-                                <input type="submit"   value="Aceptar" class="btn btn-success">
-                                <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
+                            <div class="form-group ">
+                                <label for="year old" class="col-form-label">Automovil:</label>
+                                <input required="" type="number"   value="" id="idNombre"  name="edad"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
+                            <div class="form-group ">
+                                <label for="telefone" class="col-form-label">Direccion:</label>
+                                <input required="" type="tel"   value="" id="idNombre"  name="telefono"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone" class="col-form-label">Tipo De Lavado:</label>
+                                <input required="" type="tel"   value="" id="idNombre"  name="telefono"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone" class="col-form-label">Lavador:</label>
+                                <input required="" type="tel"   value="" id="idNombre"  name="telefono"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone" class="col-form-label">Precio:</label>
+                                <input required="" type="tel"   value="" id="idNombre"  name="telefono"  class="form-control" aria-describedby="sizing-addon3" >
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit"   value="Aceptar" class="btn btn-success">
+                            <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
-    <!--CODIGO DE VENTANA EMERGENTE PARA ELIMINAR-->
+            
+    <!--Codigo de la ventana emergente de eliminar-->
     <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background: #DF3C04;  ">
-                    <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <p style="color: #ffffff;">Eliminar Servicio <i class=""></i></p>
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="app-personal.php">
-                        <input type="hidden" name="modificarPersonal"  value="1">
-                        <input type="hidden" name="idP" id="idP" value="">
-                        <div class="container aspirante">
-                            <div class="row">
-                                <p>¿Desea realmente elminar este servicio?</p>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background: #C80000  ;  ">
+                        <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <p style="color: #ffffff;">Eliminar Servicio  <i class="pe-7s-delete-user"></i></p>
+                    </div>
+                    <form method="post" action="servicios.php">
+                              <div class="modal-body">
+                            <input type="hidden" name="eliminarServicio"  value="1">
+                            <input type="hidden" name="idP" id="idP" value="">
+                                    <p>¿Desea realmente eliminar este servicio?</p>
+                                <div class="modal-footer" >   
+                                    <input type="submit"   value="Aceptar" class="btn btn-success">
+                                    <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
+                                </div>
                             </div>
-                            <div class="form-group center-block" >   
-                                <input type="submit"   value="Aceptar" class="btn btn-success">
-                                <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
-                            </div>
-                        </div>
-                    </form>
+                              </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
 </body>
 <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>

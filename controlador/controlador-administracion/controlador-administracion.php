@@ -80,7 +80,7 @@ public function __construct() {
         }
    //Termina agregarProducto
          //INICIA AGREGAR INVENTARIO
-        if(isset($_POST['agregar']))
+        if(isset($_POST['agregarInventario']))
             {
             $nombre=$_POST['name'];
             $cantidad=$_POST['cantidad'];
@@ -126,6 +126,19 @@ public function __construct() {
        
         //TERMINA EL DE AGREGAR SERVICIO
         
+        //INICIO DE AGREGAR UN CARRO
+        
+        if(isset($_POST['agregarCoche'])){
+            $marca =$_POST['marca'];
+            $modelo =$_POST['modelo'];
+            $color=$_POST['color'];
+            $tipo =$_POST['tipo'];
+            $placas =$_POST['placas'];
+            $id_cliente = $_POST['id_cliente'];
+            
+            $this->modelo->agregarCarro($marca, $modelo, $color, $tipo, $placas, $id_cliente);
+            
+        }
     
     if(isset($_POST['eliminarWasher'])){
         $this->modelo->eliminarWasher($_POST['id']);

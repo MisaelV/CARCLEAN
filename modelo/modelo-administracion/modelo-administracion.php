@@ -28,4 +28,9 @@ class modeloAdministracion extends BD {
      public function agregarServicio($cliente,$automovil,$direccion,$tipo_lavado,$lavador,$precio) {
         $this->InsertarRegistrosPreparada("INSERT INTO servicios (cliente,automovil,direccion,tipo_lavado,lavador,precio) VALUES (?,?,?,?,?,?)", array($cliente,$automovil,$direccion,$tipo_lavado,$lavador,$precio));
     }
+    
+    //Funcion agregar un carro a la base de datos
+    public function agregarCarro($marca,$modelo,$color,$tipo,$placas,$id_cliente){
+        $this->InsertarRegistrosPreparada("INSERT INTO auto (marca,modelo,color,tipo,placas,id_cliente) VALUES (?,?,?,?,?,? )", array($marca,$modelo,$color,$tipo,$placas,$id_cliente));
+    }
 }
