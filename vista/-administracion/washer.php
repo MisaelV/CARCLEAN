@@ -112,43 +112,10 @@ $controlador= new controladorAdministracion();
                                             <th>Precio</th>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Alexis Mendez Bautista</td>
-                                                    <td>Omar Garcia Gonazales</td>
-                                                    <td>$434.00</td>
-                                                    <td><a href="#modalEliminar" data-toggle="modal" style="color: red;">Eliminar</a> <a href="#modalModificar" data-toggle="modal">Modificar</a></td>                                        </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Alejandro Mendez Reyes</td>
-                                                    <td>Gustavo Gadiel Mendoza Paredes</td>
-                                                    <td>$545.00</td>
-                                                    <td><a href="#modalEliminar" data-toggle="modal" style="color: red;">Eliminar</a> <a href="#modalModificar" data-toggle="modal">Modificar</a></td>                                        </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>Rocio Bautista Hernadez</td>
-                                                    <td>Roberto Moron Gonzales</td>
-                                                    <td>$545.00</td>
-                                                    <td><a href="#modalEliminar" data-toggle="modal" style="color: red;">Eliminar</a> <a href="#modalModificar" data-toggle="modal">Modificar</a></td>                                        </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>David Gonzales Perez</td>
-                                                    <td>Pancracia Gutierrez Gimenez</td>
-                                                    <td>$432.00</td>
-                                                    <td><a href="#modalEliminar" data-toggle="modal" style="color: red;">Eliminar</a> <a href="#modalModificar" data-toggle="modal">Modificar</a></td>                                        </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>Juan Manuel Hernadez Gonzales</td>
-                                                    <td>Omar Alexis Gutirres Gonzales</td>
-                                                    <td>$4564.00</td>
-                                                    <td><a href="#modalEliminar" data-toggle="modal" style="color: red;">Eliminar</a> <a href="#modalModificar" data-toggle="modal">Modificar</a></td>                                        </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td>Miguel Lopez Cardenas</td>
-                                                    <td>Josefina Gutierrez Perez</td>
-                                                    <td>$435.00</td>
-                                                    <td><a href="#modalEliminar" data-toggle="modal" style="color: red;">Eliminar</a> <a href="#modalModificar" data-toggle="modal">Modificar</a></td>                                     
-                                                </tr>
+                                               <?php 
+                                               echo $controlador->consultarLavador();
+                                               ?>
+                                                   
                                             </tbody>
                                         </table>
                                     </div>
@@ -310,25 +277,25 @@ $controlador= new controladorAdministracion();
                             <div class="form-group">
                                 <label>Referencia personal 1:</label>
                                 <label  class=" col-12 btn btn-primary center-block" >
-                                    Subir Archivo (JPG o PNG)<i class="pe-7s-copy-file"></i><input  type="file" class=" col-12 btn btn-facebook center-block"  style = "display: none;" id="files" name="imagen">
+                                    Subir Archivo (JPG o PNG)<i class="pe-7s-copy-file"></i><input  type="file" class=" col-12 btn btn-facebook center-block"  style = "display: none;" id="files" name="referencia1">
                                 </label>
                             </div>
                             <div class="form-group" >
                                 <label>Referencia personal 2:</label>
                                 <label  class=" col-12 btn btn-primary center-block" >
-                                    Subir Archivo (JPG o PNG)<i class="pe-7s-copy-file"></i><input  type="file" class=" col-12 btn btn-facebook center-block"  style = "display: none;" id="files" name="imagen">
+                                    Subir Archivo (JPG o PNG)<i class="pe-7s-copy-file"></i><input  type="file" class=" col-12 btn btn-facebook center-block"  style = "display: none;" id="files" name="referencia2">
                                 </label>
                             </div>
                             <div class="form-group">
                                 <label>Identificación:</label>
                                 <label  class=" col-12 btn btn-primary   center-block" >
-                                    Subir Archivo (JPG o PNG)<i class="pe-7s-copy-file"></i><input  type="file"  style = "display: none;" id="files" name="imagen">
+                                    Subir Archivo (JPG o PNG)<i class="pe-7s-copy-file"></i><input  type="file"  style = "display: none;" id="files" name="ine">
                                 </label>
                             </div>
                             <div class="form-group">
                                 <label>Comprobante domiciliario:</label>
                                 <label  class=" col-12 btn btn-primary center-block" >
-                                    Subir Archivo (JPG o PNG)<i class="pe-7s-copy-file"></i><input  type="file" class=" col-12 btn btn-facebook center-block"  style = "display: none;" id="files" name="imagen">
+                                    Subir Archivo (JPG o PNG)<i class="pe-7s-copy-file"></i><input  type="file" class=" col-12 btn btn-facebook center-block"  style = "display: none;" id="files" name="comprobante">
                                 </label>
                             </div>
                         </div>

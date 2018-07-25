@@ -24,8 +24,23 @@ public function __construct() {
         $email=$_POST["email"];
         $fecha=$_POST["fecha"];
         $this->modelo->agregarCliente($nombre,$apellidos,$email,$telefono,$fecha);
-        unset($_POST);
+        header('location:clientes.php');
     }
+      if(isset($_POST['modificarCliente'])){
+        $id=$_POST['idCliente'];
+        $nombre= $_POST['nombre'];
+        $apellidos=$_POST["apellidos"];
+        $telefono=$_POST["telefono"];
+        $email=$_POST["email"];
+        $this->modelo->modificarCliente($nombre,$apellidos,$email,$telefono,$id);
+        header('location:clientes.php');
+    }
+    if(isset($_POST['eliminarCliente'])){
+        $id=$_POST['idCliente'];
+        $this->modelo->deleteCliente($id);
+         header('location:clientes.php');
+    }
+    
     if (isset($_POST['agregarWasher'])){
                   $nombre=$_POST["nombre"];
                   $fnacimiento=$_POST["fnacimiento"];
@@ -144,7 +159,37 @@ public function __construct() {
         $this->modelo->eliminarWasher($_POST['id']);
     }
 }
+    //Funciones de consulta
+    public function consultarClientes(){
+         $reg=$this->modelo->consultarClientes();
+         $acu="";
+         foreach ($reg as $r) {
+             $acu.=' <tr>
+                                                <td>'.$r['id_cliente'].'</td>
+                                                <td>'.$r['nombre'].'</td>
+                                                <td>'.$r['email'].'</td>
+                                                <td>'.$r['telefono'].'</td>
+                                                <td class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                        <b class="caret hidden-sm hidden-xs"></b>
+                                                        <span class="notification hidden-sm hidden-xs">Opciones</span>
+                                                        <p class="hidden-lg hidden-md">
+                                                            <b class="caret"></b>
+                                                        </p>
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                         <li><a href="#modalInformacion" data-toggle="modal">Más información</a></li>
+                                                        <li><a href="#modalModificar" data-toggle="modal" onClick="modificarCliente('.$r["id_cliente"].',\''.$r["nombre"].'\',\''.$r["apellidos"].'\',\''.$r["email"].'\',\''.$r["telefono"].'\')">Modificar</a></li>
+                                                        <li><a href="#modalEliminar" data-toggle="modal" onClick="deleteCliente('.$r["id_cliente"].')">Eliminar</a></li>
+                                                        <li><a href="#modalAgregarCoche" data-toggle="modal">Agregar Coche</a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>';
+         }
+     return $acu;
+    }
+}
 
    
 
-}
+

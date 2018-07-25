@@ -13,6 +13,7 @@
  * @author Alexis
  */
 class modeloAdministracion extends BD {
+    //INICIA INSERCIONES
     //Funcion agregar cliente a la base de datos
     public function agregarCliente($nombre,$apellidos,$email,$telefono,$fecha) {
         $this->InsertarRegistrosPreparada("INSERT INTO clientes (nombre, apellidos, email, telefono, fecha_alta) VALUES (?,?,?,?,?)", array($nombre,$apellidos,$email,$telefono,$fecha));
@@ -33,4 +34,24 @@ class modeloAdministracion extends BD {
     public function agregarCarro($marca,$modelo,$color,$tipo,$placas,$id_cliente){
         $this->InsertarRegistrosPreparada("INSERT INTO auto (marca,modelo,color,tipo,placas,id_cliente) VALUES (?,?,?,?,?,? )", array($marca,$modelo,$color,$tipo,$placas,$id_cliente));
     }
+    //TERMINA INSERCIONES
+    
+    //INICIAN CONSULTAS
+    public function consultarClientes(){
+        return $this->ConsultaPreparada("SELECT *FROM clientes", array(1));
+       // return $this->ConsultaAsociativaOrdenada("clientes", array(1));
+    }
+    //TERMINAN CONSULTAS
+    
+    //INICIAN ACTUALIZACIONES
+    public function modificarCliente($nombre,$apellidos,$email,$telefono,$id){
+        $this->InsertarRegistrosPreparada("UPDATE  clientes SET  nombre=?, apellidos=?, email=?,telefono=? WHERE id_cliente=?", array($nombre,$apellidos,$email,$telefono,$id));
+    }
+    //TERMINAN ACTUALIZACIONES
+   
+    //INICIAN DELETE
+    public function deleteCliente($id){
+        $this->EliminarRegistro("DELETE FROM clientes WHERE id_cliente=?", array($id));
+    }
+    //TERMINAN DELETE
 }
