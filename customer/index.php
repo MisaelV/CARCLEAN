@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Inicio de Sesión</title>
+      <title>Inicio de Sesión</title>
         <meta charset="UTF-8">
         <link rel="icon" type="image/png" href="images/logo.png">
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -18,34 +18,31 @@
                 <form>
                     <div class="form-group" >
                         <center>
-                            <img src="../assets/images/administracion/logo.png" style="width: 6rem;">
+                            <img src="../assets/images/administracion/logo.png" style="width: 7rem;">
                         <br><br>
-                        <h4 class="">Crea una cuenta</h4>
+                        <h4 class="login-heading">Iniciar Sesión</h4>
                         </center>
-                        <hr>
                     </div>
                     <div class="form-group col-md-12">
-                        <input type="email" name="usuario" class="form-control" id="user" aria-describedby="emailHelp" placeholder="Nombre" required="">
+                        <label class="col-form-label">Nombre de usuario: </label>
+                        <input type="email" name="usuario" class="form-control" id="user" aria-describedby="emailHelp" placeholder="Enter email" required="">
                     </div>
                     <div class="form-group col-md-12">
-                        <input type="password" name="contraseña" class="form-control" id="password" placeholder="Apellido" required="">
-                    </div>
-                     <div class="form-group col-md-12">
-                        <input type="password" name="contraseña" class="form-control" id="password" placeholder="Numero telefónico" required="">
-                    </div>
-                     <div class="form-group col-md-12">
-                        <input type="password" name="contraseña" class="form-control" id="password" placeholder="Nombre de usuario" required="">
-                    </div>
-                     <div class="form-group col-md-12">
-                        <input type="password" name="contraseña" class="form-control" id="password" placeholder="Contraseña" required="">
+                        <label class="col-form-label">Password:</label>
+                        <input type="password" name="contraseña" class="form-control" id="password" placeholder="Password" required="">
                     </div>
 
                     <div class="form-group col-md-12 ">
                         <center>
-                    <button type="submit" class="btn btn-primary">Registrarte</button>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
                         </center>
                     </div>
-                    <br>
+                    <div class="form-group col-md-12 ">
+                        <center>
+                            <label class="col-form-label">¿No tienes una cuenta? Registrate <a href="register.php" style="color: darkblue"><h5>aquí</h5></a></label>
+                        </center>
+                    </div>
+                    
                     <center>
                         <p style="text-">© 2018 <a href="#" >Carclean.</a></p>
                     </center>
