@@ -110,28 +110,9 @@ $controlador = new controladorAdministracion();
                                     <th>Proveedor</th>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Líquido limpiador</td>
-                                            <td>12</td>
-                                            <td>CARCLEAN</td>
-                                            <td class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-
-                                                    <b class="caret hidden-sm hidden-xs"></b>
-                                                    <span class="notification hidden-sm hidden-xs">Opciones</span>
-                                                    <p class="hidden-lg hidden-md">
-                                                        
-                                                        <b class="caret"></b>
-                                                    </p>
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#modalModificar" data-toggle="modal">Modificar</a></li>
-                                                    <li><a href="#modalEliminar" data-toggle="modal">Eliminar</a></li>
-
-                                                </ul>
-                                            </td>
-                                        </tr>
+                                        <?php
+                                        echo $controlador->consultarProducto();
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>

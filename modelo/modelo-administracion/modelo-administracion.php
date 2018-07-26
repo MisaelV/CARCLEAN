@@ -41,6 +41,11 @@ class modeloAdministracion extends BD {
         return $this->ConsultaPreparada("SELECT *FROM clientes", array(1));
        // return $this->ConsultaAsociativaOrdenada("clientes", array(1));
     }
+    
+    public function consultarProducto(){
+        return $this->ConsultaPreparada("SELECT *FROM productos", array(1));
+    }
+
     //TERMINAN CONSULTAS
     
     //INICIAN ACTUALIZACIONES

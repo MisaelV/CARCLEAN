@@ -113,7 +113,7 @@ $controlador= new controladorAdministracion();
                                             </thead>
                                             <tbody>
                                                <?php 
-                                               echo $controlador->consultarLavador();
+                                               
                                                ?>
                                                    
                                             </tbody>

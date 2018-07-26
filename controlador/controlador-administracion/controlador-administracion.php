@@ -178,7 +178,7 @@ public function __construct() {
                                                         </p>
                                                     </a>
                                                     <ul class="dropdown-menu">
-                                                         <li><a href="#modalInformacion" data-toggle="modal">Más información</a></li>
+                                                        <li><a href="#modalInformacion" data-toggle="modal">Más información</a></li>
                                                         <li><a href="#modalModificar" data-toggle="modal" onClick="modificarCliente('.$r["id_cliente"].',\''.$r["nombre"].'\',\''.$r["apellidos"].'\',\''.$r["email"].'\',\''.$r["telefono"].'\')">Modificar</a></li>
                                                         <li><a href="#modalEliminar" data-toggle="modal" onClick="deleteCliente('.$r["id_cliente"].')">Eliminar</a></li>
                                                         <li><a href="#modalAgregarCoche" data-toggle="modal">Agregar Coche</a></li>
@@ -188,7 +188,40 @@ public function __construct() {
          }
      return $acu;
     }
+    
+    public function consultarProducto(){
+        $reg= $this->modelo->consultarProducto();
+        $acu="";
+        foreach ($reg as $r) {
+            $acu='<tr>
+                                            <td>'.$r['id_producto'].'</td>
+                                            <td>'.$r['nombreProducto'].'</td>
+                                            <td>'.$r['cantidad'].'</td>
+                                            <td>'.$r['proveedor'].'</td>
+                                            <td class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                                                    <b class="caret hidden-sm hidden-xs"></b>
+                                                    <span class="notification hidden-sm hidden-xs">Opciones</span>
+                                                    <p class="hidden-lg hidden-md">
+                                                        
+                                                        <b class="caret"></b>
+                                                    </p>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#modalModificar" data-toggle="modal">Modificar</a></li>
+                                                    <li><a href="#modalEliminar" data-toggle="modal">Eliminar</a></li>
+
+                                                </ul>
+                                            </td>
+                                        </tr>';
+            
+        }
+        return $acu;
+    }
+
 }
+
 
    
 

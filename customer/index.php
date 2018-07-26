@@ -18,7 +18,7 @@
                 <form>
                     <div class="form-group" >
                         <center>
-                            <img src="../assets/images/customer/logo.png" style="width: 6rem;">
+                            <img src="../assets/images/administracion/logo.png" style="width: 6rem;">
                         <br><br>
                         <h4 class="">Crea una cuenta</h4>
                         </center>

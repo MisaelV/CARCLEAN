@@ -18,7 +18,7 @@
                 <form>
                     <div class="form-group" >
                         <center>
-                            <img src="../../assets/images/customer/logo.png" style="width: 10rem;">
+                            <img src="../../assets/images/administracion/logo.png" style="width: 10rem;">
                         <br><br>
                         <h3 class="login-heading">Iniciar Sesión</h3>
                         </center>
