@@ -148,15 +148,15 @@ $controlador = new controladorAdministracion();
                             <input type="hidden" name="agregarInventario" value="1">
                             <div class="form-group">
                                 <label for="name" class="col-form-label">Nombre Prodcuto:</label>
-                                <input required="" type="text"   value="" id="idNombre"  name="name"  class="form-control" aria-describedby="sizing-addon3" >
+                                <input required="" type="text"   value=""   name="name"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
                             <div class="form-group ">
                                 <label for="proveedor" class="col-form-label">Proveedor:</label>
-                                <input required=""  type="text"  name="proveedor" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
+                                <input required=""  type="text"  name="proveedor"  class="form-control" aria-describedby="sizing-addon3">
                             </div>
                             <div class="form-group ">
                                 <label for="canridad" class="col-form-label">Cantidad:</label>
-                                <input required=""  type="text"  name="cantidad" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
+                                <input required=""  type="text"  name="cantidad" class="form-control" aria-describedby="sizing-addon3">
                             </div>
                             <div class="form-group">
                                 <label for="">imagen</label>
@@ -195,19 +195,20 @@ $controlador = new controladorAdministracion();
                     </div>
                       <form method="post" action="app-personal.php">
                     <div class="modal-body">
-                            <input type="hidden" name="modificarPersonal"  value="1">
-                                <input type="hidden" name="idP" id="idP" value="">
+                            <input type="hidden" name="modificarInventario"  value="1">
+                            <input type="hidden" name="idProducto" id="idProducto" value="">
+                            
                                 <div class="form-group">
                                     <label for="name" class="col-form-label">Nombre del producto:</label>
-                                    <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
+                                    <input required="" type="text"  id="pNombre"  name="name"  class="form-control" aria-describedby="sizing-addon3" >
                                 </div>
                             <div class="form-group ">
                                 <label for="proveedor" class="col-form-label">Proveedor:</label>
-                                    <input required=""  type="text"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
+                                    <input required=""  type="text"  name="proveedor" id="pProveedor" class="form-control" aria-describedby="sizing-addon3">
                                     </div>
                             <div class="form-group ">
                                 <label for="cantidad" class="col-form-label">Cantidad:</label>
-                                    <input required=""  type="text"  name="puesto" id="idPuesto" class="form-control" aria-describedby="sizing-addon3">
+                                    <input required=""  type="text"  name="cantidad" id="pCantidad" class="form-control" aria-describedby="sizing-addon3">
                                     </div>
                              </div>
                               <div class="modal-footer" >   
@@ -229,9 +230,9 @@ $controlador = new controladorAdministracion();
                         <p style="color: #ffffff;">Eliminar Producto  <i class="pe-7s-trash"></i></p>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="app-personal.php">
-                            <input type="hidden" name="modificarPersonal"  value="1">
-                                <input type="hidden" name="idP" id="idP" value="">
+                        <form method="post" action="inventario.php">
+                             <input type="hidden" name="eliminarInventario"  value="1">
+                            <input type="hidden" name="idProducto" id="idP" value="">
                             <p>¿Desea realmente eliminar este producto?</p>
                                  <div class="modal-footer" >   
                                 <input type="submit"   value="Aceptar" class="btn btn-success">
@@ -243,7 +244,8 @@ $controlador = new controladorAdministracion();
             </div>
         </div>
 </body>
-<script src="../../controlador/controlador-administracion/funciones.js" type="text/javascript"></script>
+<script src="../../controlador/controlador-administracion/js/delete.js" type="text/javascript"></script>
+<script src="../../controlador/controlador-administracion/js/update.js" type="text/javascript"></script>
 <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/js/chartist.min.js"></script>

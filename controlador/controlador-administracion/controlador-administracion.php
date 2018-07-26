@@ -16,7 +16,8 @@ class controladorAdministracion {
 private $modelo;
 public function __construct() {
     $this->modelo= new modeloAdministracion();
-    //Inicia agregarWasher
+  //INICIA EL CODIGO DEL CLIENTE
+    //Inicia agregar CLIENTE
     if(isset($_POST['agregarCliente'])){
         $nombre= $_POST['nombre'];
         $apellidos=$_POST["apellidos"];
@@ -26,6 +27,8 @@ public function __construct() {
         $this->modelo->agregarCliente($nombre,$apellidos,$email,$telefono,$fecha);
         header('location:clientes.php');
     }
+    //Inicia el agregado de cliente
+    //Iniciar modificar CLIENTE
       if(isset($_POST['modificarCliente'])){
         $id=$_POST['idCliente'];
         $nombre= $_POST['nombre'];
@@ -35,66 +38,19 @@ public function __construct() {
         $this->modelo->modificarCliente($nombre,$apellidos,$email,$telefono,$id);
         header('location:clientes.php');
     }
+    //Termina modificar CLIENTE
+    //Iniciar eliminar CLIENTE
     if(isset($_POST['eliminarCliente'])){
         $id=$_POST['idCliente'];
         $this->modelo->deleteCliente($id);
          header('location:clientes.php');
     }
+    //Termina el eliminado del CLIENTE
+    //TERMINA EL CODIGO DEL CLIENTE
+
     
-    if (isset($_POST['agregarWasher'])){
-                  $nombre=$_POST["nombre"];
-                  $fnacimiento=$_POST["fnacimiento"];
-                  $telefono=$_POST['telefono'];
-                  $escolaridad=$_POST['escolaridad'];
-                  $direccion=$_POST['direccion'];
-                  $email=$_POST['email'];
-                  $estadoCivil=$_POST['estadoCivil'];
-                  var_dump($_POST['referencia1']);
-            define('LIMITE', 5000000);
-            define('ARREGLO', serialize(array('image/jpg', 'image/jpeg', 'image/gif', 'image/png')));
-            $PERMITIDOS = unserialize(ARREGLO); //Usar unserialize para obtener el arreglo
-            if ($_FILES["referencia1"]["error"] > 0) {
-                echo'<script type="text/javascript">
-                        alert("Error de FILE Selecciona un Archivo");
-                        window.location="washer.php"
-                        </script>';
-            }
-            if ($_FILES["referencia2"]["error"] > 0) {
-                echo'<script type="text/javascript">
-                        alert("Error de FILE Selecciona un Archivo");
-                        window.location="washer.php"
-                        </script>';
-            }
-            if ($_FILES["ine"]["error"] > 0) {
-                echo'<script type="text/javascript">
-                        alert("Error de FILE Selecciona un Archivo");
-                        window.location="washer.php"
-                        </script>';
-            }
-            if ($_FILES["comprobante"]["error"] > 0) {
-                echo'<script type="text/javascript">
-                        alert("Error de FILE Selecciona un Archivo");
-                        window.location="washer.php"
-                        </script>';
-            }else {
-                if (in_array($_FILES['imagen']['type'], $PERMITIDOS) && $_FILES['imagen']['size'] <= LIMITE * 1024) {
-                    $rutaEnServidor = "../../Vista/assets/images/" . $_FILES['imagen']['name'];
-                    $ruta = "http://localhost:8081/CARCLEAN/assets/images/" . $_FILES['imagen']['name'];
-                    
-                    
-                    if (!file_exists($ruta)) {
-                        $resultado = move_uploaded_file($_FILES['imagen']['tmp_name'], $rutaEnServidor);
-                        if ($resultado) {
-                            $fechaN=  date('Y-m-d');
-                            $this->modelo->insertarNoticia($ruta, $titulo, $descripcion, $fechaN);
-                          header("location:app.php");
-                        }
-                    }
-                }
-            }
-        }
-   //Termina agregarProducto
-         //INICIA AGREGAR INVENTARIO
+    //INICIA CODIGO PARA EL INVENTARIO
+        //inicia agregar al INVENTARIO
         if(isset($_POST['agregarInventario']))
             {
             $nombre=$_POST['name'];
@@ -111,8 +67,8 @@ public function __construct() {
                         </script>';
             }else{
                 if(in_array($_FILES['imagen']['type'], $PERMITIDOS) && $_FILES['imagen']['size']<= LIMITE * 1024){
-                    $rutaEnServidor = "../../vista/-administracion/assets/img/".$_FILES['imagen']['name'];
-                    $ruta = "http://localhost/CARCLEAN/vista/-administracion/assets/img/". $_FILES['imagen']['name'];
+                    $rutaEnServidor = "../../assets/images/administracion/img-inventario/".$_FILES['imagen']['name'];
+                    $ruta = "http://localhost/CARCLEAN/assets/images/administracion/img-inventario/". $_FILES['imagen']['name'];
                 if(!file_exists($ruta)){
                     $resultado = move_uploaded_file($_FILES['imagen']['tmp_name'], $rutaEnServidor);
                     if($resultado){
@@ -123,8 +79,26 @@ public function __construct() {
             }
             
         }
+        //termina agregar INVENTARIO
+        //inicia el modificado para el inventario
+        if(isset($_POST['modificarInventario'])){
+            $id=$_POST['idProducto'];
+            $nombre=$_POST['name'];
+            $cantidad=$_POST['cantidad'];
+            $proveedor=$_POST['proveedor'];
+            $this->modelo->modificarProducto($id, $nombre, $cantidad, $proveedor);
+            header('location:inventario.php');
+            
+        }
+        //termina el modificado para el inventario
+        //inicia el eliminado del inventario    
+        if(isset($_POST['eliminarInventario'])){
+             $id=$_POST['idProducto'];
+             $this->modelo->deleteProducto($id);
+             header('location:inventario.php');
+        }
         
-        //TERMINA AGREGAR INVENTARIO
+    //TERMINA EL CODIGO DEL INVENTARIO INVENTARIO
         
         //INICIA AGREGAR SERVICIO
         if(isset($_POST['agregarservicio'])){
@@ -159,7 +133,7 @@ public function __construct() {
         $this->modelo->eliminarWasher($_POST['id']);
     }
 }
-    //Funciones de consulta
+ //Funciones de consulta
     public function consultarClientes(){
          $reg=$this->modelo->consultarClientes();
          $acu="";
@@ -193,24 +167,22 @@ public function __construct() {
         $reg= $this->modelo->consultarProducto();
         $acu="";
         foreach ($reg as $r) {
-            $acu='<tr>
+            $acu.='<tr>
                                             <td>'.$r['id_producto'].'</td>
                                             <td>'.$r['nombreProducto'].'</td>
                                             <td>'.$r['cantidad'].'</td>
                                             <td>'.$r['proveedor'].'</td>
                                             <td class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-
                                                     <b class="caret hidden-sm hidden-xs"></b>
                                                     <span class="notification hidden-sm hidden-xs">Opciones</span>
                                                     <p class="hidden-lg hidden-md">
-                                                        
-                                                        <b class="caret"></b>
+                                                    <b class="caret"></b>
                                                     </p>
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#modalModificar" data-toggle="modal">Modificar</a></li>
-                                                    <li><a href="#modalEliminar" data-toggle="modal">Eliminar</a></li>
+                                                    <li><a href="#modalModificar" data-toggle="modal" onClick="modificarInventario('.$r["id_producto"].',\''.$r["nombreProducto"].'\',\''.$r["cantidad"].'\',\''.$r["proveedor"].'\')">Modificar</a></li>
+                                                    <li><a href="#modalEliminar" data-toggle="modal" onClick="deleteInventario('.$r["id_producto"].')">Eliminar</a></li>
 
                                                 </ul>
                                             </td>

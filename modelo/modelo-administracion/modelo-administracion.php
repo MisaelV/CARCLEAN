@@ -52,11 +52,22 @@ class modeloAdministracion extends BD {
     public function modificarCliente($nombre,$apellidos,$email,$telefono,$id){
         $this->InsertarRegistrosPreparada("UPDATE  clientes SET  nombre=?, apellidos=?, email=?,telefono=? WHERE id_cliente=?", array($nombre,$apellidos,$email,$telefono,$id));
     }
+    
+    public function modificarProducto($id,$nombre,$cantidad,$proveedor){
+        $this->InsertarRegistrosPreparada("UPDATE productos SET nombreProducto=?, cantidad=?, proveedor=? WHERE id_producto=?", array($id,$nombre,$cantidad,$proveedor));
+    }
     //TERMINAN ACTUALIZACIONES
    
     //INICIAN DELETE
     public function deleteCliente($id){
         $this->EliminarRegistro("DELETE FROM clientes WHERE id_cliente=?", array($id));
+    
     }
+    
+    public function deleteProducto($id){
+        $this->EliminarRegistro("DELETE FROM productos WHERE id_producto=?", array($id));
+    }
+
+
     //TERMINAN DELETE
 }
