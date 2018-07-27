@@ -193,7 +193,7 @@ $controlador = new controladorAdministracion();
                         </button>
                         <p style="color: black;">Modificar Producto  <i class="pe-7s-tools"></i></p>
                     </div>
-                      <form method="post" action="app-personal.php">
+                    <form method="post" action="inventario.php">
                     <div class="modal-body">
                             <input type="hidden" name="modificarInventario"  value="1">
                             <input type="hidden" name="idProducto" id="idProducto" value="">

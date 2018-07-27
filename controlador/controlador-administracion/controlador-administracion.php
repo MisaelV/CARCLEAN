@@ -86,7 +86,7 @@ public function __construct() {
             $nombre=$_POST['name'];
             $cantidad=$_POST['cantidad'];
             $proveedor=$_POST['proveedor'];
-            $this->modelo->modificarProducto($id, $nombre, $cantidad, $proveedor);
+            $this->modelo->modificarProducto($nombre, $cantidad, $proveedor, $id);
             header('location:inventario.php');
             
         }
@@ -101,7 +101,7 @@ public function __construct() {
     //TERMINA EL CODIGO DEL INVENTARIO INVENTARIO
         
         //INICIA AGREGAR SERVICIO
-        if(isset($_POST['agregarservicio'])){
+        if(isset($_POST['agregarServicio'])){
             $cliente = $_POST['cliente'];
             $automovil= $_POST['automovil'];
             $direccion = $_POST['direccion'];
@@ -112,6 +112,25 @@ public function __construct() {
             $this->modelo->agregarServicio($cliente, $automovil, $direccion, $tipo_lavado, $lavador, $precio);
             
         }
+        //Termina agregar SERVICIO
+        //Inicia modificar SERVICIO
+        if(isset($_POST['modificarServicio'])){
+            $id=$_POST['idServicio'];
+            $cliente=$_POST['nombre'];
+            $automovil=$_POST['automovil'];
+            $direccion = $_POST['direccion'];
+            $tipo_lavado = $_POST['tipo_lavado'];
+            $lavador = $_POST['lavador'];
+            $precio = $_POST['precio'];
+            $this->modelo->modificarServicio($cliente, $automovil, $direccion, $tipo_lavado, $lavador, $precio,$id);
+            
+        }
+        //termine modificar SERVICIO
+        if(isset($_POST['eliminarServicio'])){
+            $id=$_POST['idServicio'];
+            $this->modelo->deleteServicio($id);
+        }
+        
        
         //TERMINA EL DE AGREGAR SERVICIO
         
@@ -134,6 +153,7 @@ public function __construct() {
     }
 }
  //Funciones de consulta
+    //Inicia consulta para clientes
     public function consultarClientes(){
          $reg=$this->modelo->consultarClientes();
          $acu="";
@@ -162,7 +182,8 @@ public function __construct() {
          }
      return $acu;
     }
-    
+    //Termina consulta para clientes
+    //Inicia consulta para productos
     public function consultarProducto(){
         $reg= $this->modelo->consultarProducto();
         $acu="";
@@ -191,10 +212,42 @@ public function __construct() {
         }
         return $acu;
     }
+    //Termina consulta para productos
+    //Inicia consulta para servicios
+    
+    public function consultarServicios(){
+        $reg= $this->modelo->consultarServicio();
+        $acu= "";
+        foreach ($reg as $r) {
+            $acu.='<tr>
+                                                <td>'.$r['id_servicio'].'</td>
+                                                <td>'.$r['cliente'].'</td>
+                                                <td>'.$r['automovil'].'</td>
+                                                <td>'.$r['direccion'].'</td>
+                                                <td>'.$r['tipo_lavado'].'</td>
+                                                <td>'.$r['lavador'].'</td>
+                                                <td>'.$r['precio'].'</td>
+                                                 <td class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                                                    <b class="caret hidden-sm hidden-xs"></b>
+                                                    <span class="notification hidden-sm hidden-xs">Opciones</span>
+                                                    <p class="hidden-lg hidden-md">
+                                                        
+                                                        <b class="caret"></b>
+                                                    </p>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#modalModificar" data-toggle="modal" onClick="updateServicio('.$r["id_servicio"].',\''.$r["cliente"].'\',\''.$r["automovil"].'\',\''.$r["direccion"].'\',\''.$r["tipo_lavado"].'\',\''.$r["lavador"].'\',\''.$r["precio"].'\')">Modificar</a></li>
+                                                    <li><a href="#modalEliminar" data-toggle="modal" onClick="deleteServicio('.$r["id_servicio"].')">Eliminar</a></li>
+
+                                                </ul>
+                                            </td>
+                                            </tr>';
+            
+        }
+        return $acu;
+    }
 
 }
-
-
-   
-
 

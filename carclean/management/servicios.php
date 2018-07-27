@@ -105,34 +105,19 @@ $controlador = new controladorAdministracion();
                                 <div class="content table-responsive table-full-width">
                                     <table class="table table-hover table-striped">
                                         <thead>
-                                        <th>ID</th>
-                                        <th>Cliente</th>
-                                        <th>Lavador</th>
-                                        <th>Precio</th>
+                                       <th >ID</th>
+                                            <th >Cliente</th>
+                                            <th>Direccion</th>
+                                            <th>Telefono</th>
+                                            <th>Tipo de lavado</th>
+                                            <th>Lavador</th>
+                                            <th>Precio</th>
+                                            <th></th>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Alexis Mendez Bautista</td>
-                                                <td>Omar Garcia Gonazales</td>
-                                                <td>$434.00</td>
-                                                 <td class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-
-                                                    <b class="caret hidden-sm hidden-xs"></b>
-                                                    <span class="notification hidden-sm hidden-xs">Opciones</span>
-                                                    <p class="hidden-lg hidden-md">
-                                                        
-                                                        <b class="caret"></b>
-                                                    </p>
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#modalModificar" data-toggle="modal">Modificar</a></li>
-                                                    <li><a href="#modalEliminar" data-toggle="modal">Eliminar</a></li>
-
-                                                </ul>
-                                            </td>
-                                            </tr>
+                                           <?php
+                                           echo $controlador->consultarServicios();
+                                           ?> 
                                         </tbody>
                                     </table>
                                 </div>
@@ -164,7 +149,7 @@ $controlador = new controladorAdministracion();
                     </div>
                     <form method="post" action="servicios.php" enctype="multipart/form-data">
                         <div class="modal-body ">
-                            <input type="hidden" name="agregarservicio"  value="1">
+                            <input type="hidden" name="agregarServicio"  value="1">
                             <div class="form-group col-lg-12">
                                 <label for="name" class="col-form-label">Cliente:</label>
                                 <input required="" type="text"   value="" id="wNombre"  name="cliente"  class="form-control" aria-describedby="sizing-addon3" >
@@ -209,33 +194,33 @@ $controlador = new controladorAdministracion();
                         </button>
                         <p style="color: black;">Modificar Washer <i class="pe-7s-tools"></i></p>
                     </div>
-                    <form method="post" action="app-personal.php">
+                    <form method="post" action="servicios.php">
                         <div class="modal-body">
-                            <input type="hidden" name="modificarPersonal"  value="1">
-                            <input type="hidden" name="idP" id="idP" value="">
-                            <div class="form-group ">
+                            <input type="hidden" name="modificarServicio"  value="1">
+                            <input type="hidden" name="idServicio" id="idServicio">
+                            <div class="form-group">
                                 <label for="name" class="col-form-label" >Cliente:</label>
-                                <input required="" type="text"   value="" id="idNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
+                                <input required="" type="text"   value="" id="sCliente"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
                             <div class="form-group ">
                                 <label for="year old" class="col-form-label">Automovil:</label>
-                                <input required="" type="number"   value="" id="idNombre"  name="edad"  class="form-control" aria-describedby="sizing-addon3" >
+                                <input required="" type="text"   value="" id="sAutomovil"  name="automovil"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
                             <div class="form-group ">
                                 <label for="telefone" class="col-form-label">Direccion:</label>
-                                <input required="" type="tel"   value="" id="idNombre"  name="telefono"  class="form-control" aria-describedby="sizing-addon3" >
+                                <input required="" type="tel"   value="" id="sDireccion"  name="direccion"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
                             <div class="form-group">
                                 <label for="telefone" class="col-form-label">Tipo De Lavado:</label>
-                                <input required="" type="tel"   value="" id="idNombre"  name="telefono"  class="form-control" aria-describedby="sizing-addon3" >
+                                <input required="" type="tel"   value="" id="sTipo_lavado"  name="tipo_lavado"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
                             <div class="form-group">
                                 <label for="telefone" class="col-form-label">Lavador:</label>
-                                <input required="" type="tel"   value="" id="idNombre"  name="telefono"  class="form-control" aria-describedby="sizing-addon3" >
+                                <input required="" type="tel"   value="" id="sLavador"  name="lavador"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
                             <div class="form-group">
                                 <label for="telefone" class="col-form-label">Precio:</label>
-                                <input required="" type="tel"   value="" id="idNombre"  name="telefono"  class="form-control" aria-describedby="sizing-addon3" >
+                                <input required="" type="tel"   value="" id="sPrecio"  name="precio"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -260,18 +245,22 @@ $controlador = new controladorAdministracion();
                     <form method="post" action="servicios.php">
                               <div class="modal-body">
                             <input type="hidden" name="eliminarServicio"  value="1">
-                            <input type="hidden" name="idP" id="idP" value="">
+                            <input type="hidden" name="idServicio" id="idS" >
                                     <p>¿Desea realmente eliminar este servicio?</p>
                                 <div class="modal-footer" >   
                                     <input type="submit"   value="Aceptar" class="btn btn-success">
                                     <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
                                 </div>
                             </div>
-                              </div>
                         </form>
+                              </div>
+                        
                     </div>
                 </div>
 </body>
+<script src="../../controlador/controlador-administracion/js/update.js" type="text/javascript"></script>
+<script src="../../controlador/controlador-administracion/js/delete.js" type="text/javascript"></script>
+
 <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/js/chartist.min.js"></script>

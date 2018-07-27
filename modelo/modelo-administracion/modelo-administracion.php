@@ -45,6 +45,10 @@ class modeloAdministracion extends BD {
     public function consultarProducto(){
         return $this->ConsultaPreparada("SELECT *FROM productos", array(1));
     }
+    
+    public function consultarServicio(){
+        return $this->ConsultaPreparada("SELECT *FROM servicios", array(1));
+    }
 
     //TERMINAN CONSULTAS
     
@@ -53,9 +57,14 @@ class modeloAdministracion extends BD {
         $this->InsertarRegistrosPreparada("UPDATE  clientes SET  nombre=?, apellidos=?, email=?,telefono=? WHERE id_cliente=?", array($nombre,$apellidos,$email,$telefono,$id));
     }
     
-    public function modificarProducto($id,$nombre,$cantidad,$proveedor){
+    public function modificarProducto($nombre,$cantidad,$proveedor,$id){
         $this->InsertarRegistrosPreparada("UPDATE productos SET nombreProducto=?, cantidad=?, proveedor=? WHERE id_producto=?", array($id,$nombre,$cantidad,$proveedor));
     }
+    
+    public function modificarServicio($cliente,$automovil,$direccion,$tipo_lavado,$lavador,$precio,$id){
+        $this->ModificarRegistrosPreparada("UPDATE servicios SET cliente=?, automovil=?, direccion=?, tipo_lavado=?, lavador=?, precio=? WHERE id_servicio=?", array($cliente,$automovil,$direccion,$tipo_lavado,$lavador,$precio,$id));
+    }
+
     //TERMINAN ACTUALIZACIONES
    
     //INICIAN DELETE
@@ -66,6 +75,10 @@ class modeloAdministracion extends BD {
     
     public function deleteProducto($id){
         $this->EliminarRegistro("DELETE FROM productos WHERE id_producto=?", array($id));
+    }
+    
+    public function deleteServicio($id){
+        $this->EliminarRegistro("DELETE FROM servicios WHERE id_servicio=?", array($id));
     }
 
 
