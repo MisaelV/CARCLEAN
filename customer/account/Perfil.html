@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Inicio</title>
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    
+
+    <!-- Bootstrap Core Css -->
+    <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Morris Chart Css-->
+    <link href="plugins/morrisjs/morris.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="css/themes/all-themes.css" rel="stylesheet" />
+</head>
+
+<body class="theme-red">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Porfavor Espere...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">buscar</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="index.html">PERFIL DE USUARIO</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Call Search 
+                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">playlist_add</i></a></li>
+                    <!-- #END# Call Search -->
+                    <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">playlist_add</i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="image">
+                    <img src="images/user.png" width="48" height="48" alt="User" />
+                </div>
+                <div class="info-container">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
+                    <div class="email">john.doe@example.com</div>
+                    <div class="btn-group user-helper-dropdown">
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="Perfil.html"><i class="material-icons">person</i>Perfil</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">directions_car</i>Coches</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>Cerrar Sesion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- #User Info -->
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li class="header">MENU DE NAVEGACION</li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="material-icons col-cyan">playlist_add</i>
+                            <span class="col-cyan">Solicitar Servicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="material-icons">home</i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Autos.html">
+                            <i class="material-icons">directions_car</i>
+                            <span>Mis Autos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Servicios.html">
+                            <i class="material-icons">sort</i>
+                            <span>Mis Servicios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Promociones.html">
+                            <i class="material-icons">monetization_on</i>
+                            <span>Promociones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Terminos_Condiciones.html">
+                            <i class="material-icons">assignment</i>
+                            <span>Terminos y Condiciones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="material-icons col-red">exit_to_app</i>
+                            <span>Cerrar Sesion</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- #Menu -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <aside id="rightsidebar" class="right-sidebar">
+            <ul class="nav nav-tabs tab-nav-right" role="tablist">
+                <li role="presentation" class="active"><a href="#skins" data-toggle="tab">MIS SERVICIOS</a></li>
+                <li role="presentation"><a href="#settings" data-toggle="tab">AGREGAR SERVICIO</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
+                    <ul class="demo-choose-skin">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i  class="material-icons col-cyan">sort</i>
+                                <span>Servicio 1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i  class="material-icons col-cyan">sort</i>
+                                <span>Servicio 2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i  class="material-icons col-cyan">sort</i>
+                                <span>Servicio 3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i  class="material-icons col-cyan">sort</i>
+                                <span>Servicio 4</span>
+                            </a>
+                        </li>
+                        <!--<li data-theme="pink">
+                            <div class="pink"></div>
+                            <span>Pink</span>
+                        </li>
+                        <li data-theme="purple">
+                            <div class="purple"></div>
+                            <span>Purple</span>
+                        </li>
+                        <li data-theme="deep-purple">
+                            <div class="deep-purple"></div>
+                            <span>Deep Purple</span>
+                        </li>
+                        <li data-theme="indigo">
+                            <div class="indigo"></div>
+                            <span>Indigo</span>
+                        </li>
+                        <li data-theme="blue">
+                            <div class="blue"></div>
+                            <span>Blue</span>
+                        </li>
+                        <li data-theme="light-blue">
+                            <div class="light-blue"></div>
+                            <span>Light Blue</span>
+                        </li>
+                        <li data-theme="cyan">
+                            <div class="cyan"></div>
+                            <span>Cyan</span>
+                        </li>
+                        <li data-theme="teal">
+                            <div class="teal"></div>
+                            <span>Teal</span>
+                        </li>
+                        <li data-theme="green">
+                            <div class="green"></div>
+                            <span>Green</span>
+                        </li>
+                        <li data-theme="light-green">
+                            <div class="light-green"></div>
+                            <span>Light Green</span>
+                        </li>
+                        <li data-theme="lime">
+                            <div class="lime"></div>
+                            <span>Lime</span>
+                        </li>
+                        <li data-theme="yellow">
+                            <div class="yellow"></div>
+                            <span>Yellow</span>
+                        </li>
+                        <li data-theme="amber">
+                            <div class="amber"></div>
+                            <span>Amber</span>
+                        </li>
+                        <li data-theme="orange">
+                            <div class="orange"></div>
+                            <span>Orange</span>
+                        </li>
+                        <li data-theme="deep-orange">
+                            <div class="deep-orange"></div>
+                            <span>Deep Orange</span>
+                        </li>
+                        <li data-theme="brown">
+                            <div class="brown"></div>
+                            <span>Brown</span>
+                        </li>
+                        <li data-theme="grey">
+                            <div class="grey"></div>
+                            <span>Grey</span>
+                        </li>
+                        <li data-theme="blue-grey">
+                            <div class="blue-grey"></div>
+                            <span>Blue Grey</span>
+                        </li>
+                        <li data-theme="black">
+                            <div class="black"></div>
+                            <span>Black</span>
+                        </li>-->
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="settings">
+                    <div class="demo-settings">
+                        <p>SERVICIO DE LAVADO</p>
+                        <ul class="setting-list">
+                            <li>
+                            <a href="javascript:void(0);">
+                                <i  class="material-icons col-cyan">playlist_add</i>
+                                <span>Servicio 1</span>
+                            </a>
+                        </li>
+                            <li>
+                            <a href="javascript:void(0);">
+                                <i  class="material-icons col-cyan">playlist_add</i>
+                                <span>Servicio 2</span>
+                            </a>
+                        </li>
+                        </ul>
+                        <p>SERVICIO DE ENCERADO</p>
+                        <ul class="setting-list">
+                            <li>
+                            <a href="javascript:void(0);">
+                                <i  class="material-icons col-cyan">playlist_add</i>
+                                <span>Servicio 1</span>
+                            </a>
+                        </li>
+                            <li>
+                            <a href="javascript:void(0);">
+                                <i  class="material-icons col-cyan">playlist_add</i>
+                                <span>Servicio 2</span>
+                            </a>
+                        </li>
+                        </ul>
+                        <p>SERVICIO ESPECIAL</p>
+                        <ul class="setting-list">
+                            <!--<li>
+                                <span>Offline</span>
+                                <div class="switch">
+                                    <label><input type="checkbox"><span class="lever"></span></label>
+                                </div>
+                            </li>-->
+                            <li>
+                            <a href="javascript:void(0);">
+                                <i  class="material-icons col-cyan">playlist_add</i>
+                                <span>Servicio 1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i  class="material-icons col-cyan">playlist_add</i>
+                                <span>Servicio 2</span>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>DASHBOARD</h2>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div class="card">
+                        <img src="images/team-1.jpg">
+                    </div>
+                </div>
+                <div class="col-md-9 col-lg-9">
+                    <h2>NOMBRE</h2>
+                    <p>Aqui va la descripcion 
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p>
+                        Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.
+                    </p>
+                    <p>
+                        Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum urna sed risus. In convallis tellus a mauris. Curabitur non elit ut libero tristique sodales. Mauris a lacus. Donec mattis semper leo. In hac habitasse platea dictumst. Vivamus facilisis diam at odio. Mauris dictum, nisi eget consequat elementum, lacus ligula molestie metus, non feugiat orci magna ac sem. Donec turpis. Donec vitae metus. Morbi tristique neque eu mauris. Quisque gravida ipsum non sapien. Proin turpis lacus, scelerisque vitae, elementum at, lobortis ac, quam. Aliquam dictum eleifend risus. In hac habitasse platea dictumst. Etiam sit amet diam. Suspendisse odio. Suspendisse nunc. In semper bibendum libero.
+                    </p>
+                    <p>
+                        Proin nonummy, lacus eget pulvinar lacinia, pede felis dignissim leo, vitae tristique magna lacus sit amet eros. Nullam ornare. Praesent odio ligula, dapibus sed, tincidunt eget, dictum ac, nibh. Nam quis lacus. Nunc eleifend molestie velit. Morbi lobortis quam eu velit. Donec euismod vestibulum massa. Donec non lectus. Aliquam commodo lacus sit amet nulla. Cras dignissim elit et augue. Nullam non diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Aenean vestibulum. Sed lobortis elit quis lectus. Nunc sed lacus at augue bibendum dapibus.
+                    </p>
+               
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jquery Core Js -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="plugins/node-waves/waves.js"></script>
+
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="plugins/jquery-countto/jquery.countTo.js"></script>
+
+    <!-- Morris Plugin Js -->
+    <script src="plugins/raphael/raphael.min.js"></script>
+    <script src="plugins/morrisjs/morris.js"></script>
+
+    <!-- ChartJs -->
+    <script src="plugins/chartjs/Chart.bundle.js"></script>
+
+    <!-- Flot Charts Plugin Js -->
+    <script src="plugins/flot-charts/jquery.flot.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.resize.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.pie.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.categories.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.time.js"></script>
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/admin.js"></script>
+    <script src="js/pages/index.js"></script>
+
+    <!-- Demo Js -->
+    <script src="js/demo.js"></script>
+</body>
+
+</html>

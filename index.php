@@ -8,498 +8,756 @@ include_once './controlador/controlador-pagina/controlador-pagina.php';/** se in
  */
 $controlador = new controladorPagina();
 ?>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>CARCLEAN</title>
-        <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
-        <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="vista/page/css/jquery.bxslider.css">
-        <link rel="stylesheet" type="text/css" href="vista/page/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="vista/page/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="vista/page/css/animate.css">
-        <link rel="stylesheet" type="text/css" href="vista/page/css/style.css">
-        <link  rel="stylesheet" type="text/css" href="settings/style-web/css.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!-- Title -->
+        <title>Carclean</title>
+
+        <!-- Favicon -->
+        <link rel="icon" href="assets/images/administracion/logo.png">
+
+        <!-- Core Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+
+        <!-- Responsive CSS -->
+        <link href="css/responsive.css" rel="stylesheet">
 
     </head>
 
     <body>
-        <!--#025A9B  Color de página-->
-        <div class="loader"></div>
-        <div id="myDiv">
-            <!--HEADER-->
-            <div class="header">
-                <div class="bg-color">
-                    <header id="main-header">
-                        <nav class="navbar navbar-default navbar-fixed-top">
-                            <div class="container">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                    <!-- Logo de la pagina-->
-                                    <a class="navbar-brand" href="#">CAR<span class="logo-dec">CLEAN</span></a>
-                                    <!---->
-                                </div>
-                                <!-- Barra de menu general, que enlaza a diferentes paginas del proyecto o externas.-->
-                                <div class="collapse navbar-collapse" id="myNavbar">
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li class="active"><a href="#main-header">INICIO</a></li>
-                                        <li class=""><a href="#servicios">SERVICIOS</a></li>
-                                        <li class=""><a href="#beneficios">BENEFICIOS</a></li>
-                                        <li class=""><a href="#Paquetes">PAQUETES</a></li>
-                                        <li class=""><a href="#nosotros">NOSOTROS</a></li>
-                                        <li class=""><a href="#modalIniciarSesion" data-toggle="modal" >Inicar Sesion</a></li>
+        <!--  <div id="preloader">
+            <div class="colorlib-load"></div>
+        </div> -->
+       
+
+        <!-- ***** Header Area Start ***** -->
+        <header class="header_area animated " style=" background-color: rgba(5, 68, 103,0.8 );" >
+            <div class="container-fluid " >
+                <div class="row align-items-center">
+                    <!-- Menu Area Start -->
+                    <div class="col-12 col-lg-10">
+                        <div class="menu_area">
+                            <nav class="navbar navbar-expand-lg navbar-light" >
+                                <!-- Logo -->
+                                <a class=" " href="#" ><h4 class="nav-link">Carclean</h4></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                                <!-- Menu Area -->
+                                <div class="collapse navbar-collapse" id="ca-navbar">
+                                    <ul class="navbar-nav ml-auto" id="nav">
+                                        <li class="nav-item active"><a class="nav-link" href="#home">Inicio</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#BENEFICIOS">Beneficios</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#VENTAJAS">Ventajas</a></li>                                                                        
                                     </ul>
+                                    <div class="sing-up-button d-lg-none">
+                                        <a href="customer/index.php">Iniciar sesión</a>
+                                    </div>
                                 </div>
-                                <!---->
-                            </div>
-                        </nav>
-                    </header>
-                    <!-- SLOGAN DE LA PAGINA "CARECLEAN"-->
-
-
-
-                    <div class="wrapper">
-                        <div class="container">
-                            <div class="row">
-                                <div class="banner-info text-center wow fadeIn delay-05s">                                 
-                                    <!--SLAIDER DE IMAGENES QUE REPRESENTEN EL TRABAJO O SERVICIOS OFRECIDOS POR LA EMPRESA RECIENTEMENTE-->
-                                    <section id="portfolio" class="section-padding wow fadeInUp delay-05s">
-                                        <div class="container">
-                                            <div class="row">
-
-                                                <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
-                                                    <!-- Overlay -->
-                                                    <div class="overlay"></div>
-
-                                                    <!-- Wrapper for slides -->
-                                                    <div class="carousel-inner">
-                                                        <div class="item slides active">
-                                                            <div class="slide-1"></div>
-                                                            <div class="hero">
-                                                                <hgroup>
-                                                                    <h1 >CON CARCLEAN SIEMPRE TENDRÁS TU AUTO LIMPIO, DESDE LA COMODIDAD DE TU HOGAR U OFICINA.</h1>        
-
-                                                                </hgroup>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item slides">
-                                                            <div class="slide-2"></div>
-                                                            <div class="hero">        
-                                                                <hgroup>
-                                                                    <h1>¡OBTEN UN DESCUENTO EN TU PRIMER SERVICIO DE AUTOLAVADO!</h1>
-                                                                    <h3>La próxima vez que lavemos tu auto, asegúrate de pedir una tarjeta de miembro del Club de descuentos.</h3>
-                                                                </hgroup>       
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item slides">
-                                                            <div class="slide-3"></div>
-                                                            <div class="hero">        
-                                                                <hgroup>
-                                                                    <h1>¡ACUMULA 10 LAVADAS Y LA SIGUIENTE ES GRATIS!</h1>
-                                                                </hgroup>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item slides">
-                                                            <div class="slide-3"></div>
-                                                            <div class="hero">        
-                                                                <hgroup>
-                                                                    <h1>¡NUESTRO LAVADO DE AUTOS TIENE UNA VARIEDAD DE SERVICIOS DE ALTA CALIDAD QUE LE ENCANTARÁ A SU AUTOMÓVIL (Y SU BILLETERA)!</h1>
-                                                                </hgroup>
-
-                                                            </div>
-                                                        </div>
-                                                    </div> 
-                                                </div>
-
-                                                <!--boton de registro-->       
-                                                
-
-                                                </section>                                     
-                                            </div>
-
-                                        </div>
-                                        <div class="overlay-detail">
-                                            <a href="#feature"><i class="fa fa-angle-down"></i></a>
-                                        </div>                                        
-                                </div>
-                            </div>
+                            </nav>
                         </div>
                     </div>
-                    <!---->
-                    <!-- APARTADO DE SERVICIOS  DE LA PAGINA -->
-                    <section id="servicios" class="section-padding wow fadeIn delay-05s">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h2 class="service-title pad-bt15">Nuestros servicios</h2>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="wrap-item text-center">
-                                        <div class="item-img">
-                                            <!--ICONO REPRESENTATIVO DE EL SERVICIO OFRECIDO-->
-                                            <img src="vista/page/ImagenesCW/Exterior.jpg">
-                                        </div>
-                                        <h3 class="pad-bt15">Lavado completo del exterior</h3>
-                                        <p>Cuando conduce su automóvil sin una limpieza por mucho tiempo, no pasará mucho tiempo hasta que alguien escriba "Láveme" en él. Para evitar eso y hacer un mantenimiento adecuado para el aspecto de su auto, ¡asegúrese de lavar regularmente el exterior!.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="wrap-item text-center">
-                                        <div class="item-img">
-                                            <!--ICONO REPRESENTATIVO DE EL SERVICIO OFRECIDO-->
-                                            <img src="vista/page/ImagenesCW/interiror.jpg">
-                                        </div>
-                                        <h3 class="pad-bt15">Lavado completo de interiores</h3>
-                                        <p>Limpiar el interior de su vehículo es tan importante como hacer el mantenimiento exterior, si no más. Esto significa que cuando ha pasado demasiado tiempo desde la última vez que ordenó realizar una limpieza, ¡es hora de hacerlo ahora mismo!</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="wrap-item text-center">
-                                        <div class="item-img">
-                                            <!--ICONO REPRESENTATIVO DE EL SERVICIO OFRECIDO-->
-                                            <img src="vista/page/ImagenesCW/encerado.jpg">
-                                        </div>
-                                        <h3 class="pad-bt15">Encerado</h3>
-                                        <p>Cuando hablamos de cuidar adecuadamente su vehículo, los detalles automáticos vienen a la mente de inmediato. Es una de las partes más importantes de este servicio de cuidado del automóvil y está diseñada para hacer que la superficie de su coche sea nítida y bien pulida, ¡tan brillante como brillante!</p>
-                                    </div>
-                                </div>
-
-
-                            </div>
+                    <!-- Signup btn -->
+                    <div class="col-12 col-lg-2">
+                        <div class="sing-up-button d-none d-lg-block">
+                            <a href="customer/index.php">Iniciar sesión</a>
                         </div>
-                    </section>
-                    <!---->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ***** Header Area End ***** -->
 
-                    <!--APARTADO DE BENEFICIOS-->
-                    <section id="beneficios" class="section-padding wow fadeInUp delay-05s">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h2 class="service-title pad-bt15">Nuestros Beneficios</h2>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12">
-                                    <div class="service-item">
-                                        <img src="vista/page/ImagenesCW/006-servicio-al-cliente.png">
-                                        <h3>Reserva facil.</h3>
-                                        <p>Lo primero es que tendrá que reservar una cita con nosotros.</p>
+        <!-- ***** Wellcome Area Start ***** -->
+        <section class="wellcome_area clearfix" id="home" style=" background-color: #0C96D7;">
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
 
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12">
-                                    <div class="service-item">
-                                        <img src="vista/page/ImagenesCW/007-mantenimiento.png">
-                                        <h3>Perfecto Servicio</h3>
-                                        <p>Cuando su auto ya esté en nuestras manos, todo lo que tendrá que hacer es esperar un poco hasta que quede todo brillante y limpio.</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12">
-                                    <div class="service-item">
-                                        <img src="vista/page/ImagenesCW/005-servicio.png">
-                                        <h3>Servicios adicionales</h3>
-                                        <p>Además de proporcionar los mejores servicios de lavado exterior e interior a domicilio. ¡También ofrecemos encerado!</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12">
-                                    <div class="service-item">
-                                        <img src="vista/page/ImagenesCW/004-etiqueta-del-precio.png">
-                                        <h3>Precios increibles</h3>
-                                        <p>
-                                            Con todos nuestros servicios siendo realmente de primera categoría, aquí también está la última alegría: ¡El mejor precio!.</p>                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!---->
-                    <!--APARTADO DE PAQUETES-->
-                    <section id="Paquetes" class=" section-padding wow fadeInUp delay-05s fir-paquetes">
-                        <div class="container ">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h2 class="service-title pad-bt15 " style="color:#0F76CC ">Paquetes</h2>
-                                </div>
-
-                                <div class="col-md-3 col-sm-6 col-xs-12 paquete">
-                                    <div class="">
-                                        <h1>BASICO</h1>
-                                        <h3>$100.00 MN</h3>
-                                        <br>
-                                        <ul>
-                                            <li><span class="viñeta">•</span>Lavado y Aspirado</li>
-                                            <br>
-                                            <li><span class="viñeta">•</span>Secado con tela Micro-fibra</li>
-                                            <br>                                            
-                                            <li><span class="viñeta">•</span>Limpieza de tablero y consola central</li> 
-                                            <br>
-                                            <li><span class="viñeta">•</span>Eliminacion de olores en su totalidad</li>
-                                            <br>
-                                            <li><span class="viñeta">•</span>Tiempo maximo de espera 50 minutos</li>
-
-                                        </ul>
-
-                                    </div>
-
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12 paquete">
-                                    <div class="service-item">
-                                        <h1>OPTIMO</h1>
-                                        <h3>$150.00 MN</h3>
-                                        <br>
-                                        <ul>
-                                            <li><span class="viñeta">•</span>Lavado y Aspirado</li>
-                                            <br>
-                                            <li><span class="viñeta">•</span>Secado con tela Micro-fibra</li> 
-                                            <br>
-                                            <li><span class="viñeta">•</span>Limpieza de tablero y consola central</li>
-                                            <br>
-                                            <li><span class="viñeta">•</span>Terminado de llantas y rines a mano</li>
-                                            <br>
-                                            <li><span class="viñeta">•</span>Eliminacion de olores en su totalidad</li>
-                                            <br>                                            
-                                            <li><span class="viñeta">•</span>Tiempo Maximo 40 Minutos</li>
-
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12 paquete">
-                                    <div class="service-item">
-                                        <h1>PRO</h1>
-                                        <h3>$350.00 MN</h3>
-                                        <br>
-                                        <ul>
-                                            <li><span class="viñeta">•</span>Lavado y Aspirado</li>
-                                            <br>
-                                            <li><span class="viñeta">•</span>Secado con tela Micro-fibra</li>
-                                            <br>
-                                            <li><span class="viñeta">•</span>Aplicacion de Cera liquida en el cecado</li>
-                                            <br>
-                                            <li><span class="viñeta">•</span>Limpieza de tablero y consola central a detalle</li>
-                                            <br>
-                                            <li><span class="viñeta">•</span>Terminado de llantas y rines a mano</li>
-                                            <br>
-                                            <li><span class="viñeta">•</span>Eliminacion de olores en su totalidad</li>
-                                            <br>
-                                            <li><span class="viñeta">•</span>Hidratacion de plassticos y asientos de piel</li>
-                                            <br>
-                                            <li><span class="viñeta">•</span>Tiempo Maximo 30 Minutos</li>
-
-
-                                        </ul>
-
-                                    </div>
-                                </div>                               
-                            </div>
-                        </div>
-                    </section>
-                    <!---->
-                    <!--APARTADO MISION VISION Y VALORES.-->
-                    <section id="nosotros" class="section-padding wow fadeInUp delay-05s">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h2 class="service-title pad-bt15">POLITICAS</h2>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-6 col-xs-12">
-                                        <div class="service-item">                                        
-                                            <h3>Mision.</h3>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-6 col-xs-12">
-                                        <div class="service-item">                                        
-                                            <h3>Vision.</h3>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-6 col-xs-12">
-                                        <div class="service-item">                                        
-                                            <h3>Valores.</h3>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </section>
-                    <!---->
-                    <!--APPI google.-->
-                    <section id="appi" class="section-appi delay-05s">                       
-
-                        <div id="googleMap" style="width:100%;height:350px;"></div>
-
-                        <script>
-                            function myMap() {
-                                var mapProp = {
-                                    center: new google.maps.LatLng(18.493382, -97.412736),
-                                    zoom: 15
-                                };
-                                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-                            }
-                        </script>
-
-                        <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBEhFN-RCL131EKWGvxb6i4zifjb-fgt-4&callback=myMap"></script>
-                    </section>
-                    <!---->
-                    <!--APARTADO DE CONTACTO "FOOTER"-->
-                    <section id="contact" class="caja-desc wow fadeInUp delay-05s">
-                        <div class="container">
-                            <div class="row">                        
-                                <!--INFORMACION DE CONTACTO -->
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="loction-info">
-                                        <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Callejón Benito Juárez, #430, Centro, C.P.75700<br>Tehuacan, Puebla, Mexico</p>
-                                        <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>victor.misael@gmai..com</p>
-                                        <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+52 238 102 3760</p>
-                                    </div>
-                                </div>
-                                <!--APARTADO PARA EL FORMULARIO -->
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="contact-form">                                
-                                        <div id="errormessage"></div>
-                                        <form action="" method="post" role="form" class="contactForm">
-                                            <div class="col-md-8 ">
-                                                <div class="form-group">
-                                                    <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Ingresa nombre completo " />
-                                                    <div class="validation"></div>
-                                                </div>
-                                            </div>                                    
-                                            <div class="col-md-8">
-                                                <div class="form-group">
-                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Ingresa E-mail" />
-                                                    <div class="validation"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-10">
-                                                <div class="form-group">
-                                                    <textarea class="form-control" name="message" rows="3" data-rule="required" data-msg="Ingresa comebtario" placeholder="Mensaje" style=" border: solid 1px #0F76CC; color: #efefef!important"></textarea>
-                                                    <div class="validation"></div>
-                                                </div>
-                                                <button type="submit" class="boton  btn-submit">Enviar</button>
-                                            </div>
-                                        </form>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!---->
-                    <!--APARTADO DE CONTACTO-->
-                    <section id="contact" class="service">
-                        <div class="container">
-                            <div class="row">
-
-                                <div class="col-md-4">
-
-                                </div>
-                                <div class="col-md-4">                                  
-                                    <div class="col-md-2">
-                                        <div class="circulo"><i class="fab fa-facebook-square"></i></div>                            
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="circulo"><i class="fab fa-twitter"></i></div>                            
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <div class="circulo"><i class="fab fa-instagram"></i></div>                            
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-
-                                </div>
-                                <footer id="footer">
-                                    <div class="container">
-                                        <div class="row text-center">
-
-                                        </div>
-                                    </div>
-                                </footer>
-                            </div>
-                        </div>
-                    </section>
-                    <!---->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-caption d-none d-block well">
+                        
+                    </div>
+                    <img class="d-block w-100" src="https://m.mercedes-benz.com.mx/content/media_library/hq/hq_mpc_reference_site/passenger_cars_ng/mobile/mbp/new_cars/models/sl-class/r231/03-2016/mercedes-benz-sl-r231_modeloverview_814x383_03-2016_jpg.object-Single-MEDIA.tmp/mercedes-benz-sl-r231_modeloverview_814x383_03-2016.jpg" alt="First slide">
 
 
                 </div>
-                <!--APARTADO DE MODALES -->
-                <div class="modal fade" id="modalIniciarSesion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="b-modal modal-content">
-                            <div class="modal-header colorHeader">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <p class="log">Login</p>
-                            </div>
-                            <div class="modal-body colorContainer">
-                                <form method="post" action="">
-                                    <div class="container ">
-                                        <div class="row center-block">
-                                            <div class=" form-group" style="width:400px;">
-                                                <label>Usuario:</label>                                                
-                                                <input required="" type="text"   value="" id="idNombre"  name="nombre"  class=" txt form-control" aria-describedby="sizing-addon3" >
-                                            </div>
-                                            <div class=" form-group "style="width:400px;">
-                                                <label>Contraseña:</label>
-                                                <input required=""  type="text"  name="contraseña" id="idContraseña" class=" txt form-control" aria-describedby="sizing-addon3">
-                                            </div>
-                                            <div class="form-group col-md-12" style="padding-left: 0px;" >   
-                                                <button class="inicio-sesion"><b>Inicar sesion</b> </button>
-                                            </div>
-                                        </div>                                        
-                                        <h5 class="o">Ó</h5>
-                                        <div class="row center-block">                                           
-                                            <button class="boton-facebook"><b>Inicar sesion con Facebook</b> </button>
-                                        </div>
-                                        <br>
-                                        <div class="row center-block">                                           
-                                            <button class="boton-google"><b>Inicar sesion con Google</b></button>
-                                        </div>
-                                        
-                                    </div>
-                                </form>
-                            </div>
-                            <div class=" registro-g modal-header ">                                
-                                <h5>¿No tienes una cuenta? <span class="registro">Registrate</span></h5>
-                            </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://m.mercedes-benz.com.mx/content/media_library/hq/hq_mpc_reference_site/passenger_cars_ng/mobile/mbp/new_cars/models/mercedes_amg_gt/coupe_c_190/04-2017/mercedes-benz-amg-gt-c190_mbp_modeloverview_814x383_04-2017_jpg.object-Single-MEDIA.tmp/mercedes-benz-amg-gt-c190_mbp_modeloverview_814x383_04-2017.jpg" alt="Second slide">
+
+
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://m.mercedes-benz.com.pa/content/media_library/hq/hq_mpc_reference_site/passenger_cars_ng/mobile/mbp/new_cars/modeloverview/05-2014/mercedes-benz-cls-class-x218_modeloverview_814x383_05-2014_jpg.object-Single-MEDIA.tmp/mercedes-benz-cls-class-x218_modeloverview_814x383_05-2014.jpg" alt="Third slide">
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div> 
+            <div class="overlay-detail">
+                <a href="#feature"><i class="fa fa-angle-down"></i></a>
+            </div>                                        
+        </div>          
+            <!-- Welcome thumb -->
+            <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.5s" >
+                <img src="http://pluspng.com/img-png/mercedes-benz-png-2017-superbowl-amg-gt-coupe-gt-d-png-1440.png" alt="">
+            </div>
+        </section>
+        <!-- ***** Wellcome Area End ***** -->
+
+        <!-- ***** Special Area Start ***** -->
+        <section class="special-area bg-white section_padding_100" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Section Heading Area -->
+                        <div class="section-heading text-center">
+                            <h2 style=" color: #0C96D7;">Nosotros</h2>
+
+                            <h2 style="font-size:30px; color: #0C96D7">“No lavamos tu coche, te damos comodidad”</h2>
+                            <div class="line-shape"></div>
                         </div>
                     </div>
                 </div>
 
-                <!---->
-                </body>
-                <script src="vista/page/js/jquery.min.js"></script>
-                <script src="vista/page/js/jquery.easing.min.js"></script>
-                <script src="vista/page/js/bootstrap.min.js"></script>
-                <script src="vista/page/js/wow.js"></script>
-                <script src="vista/page/js/jquery.bxslider.min.js"></script>
-                <script src="vista/page/js/custom.js"></script>
-                <script src="vista/page/contactform/contactform.js"></script>
+                <div class="row">
+                    <!-- Single Special Area -->
+                    <div class="col-12 col-md-4">
+                        <div class="single-special text-center wow fadeInUp" data-wow-delay="0.8s">
+                            <div class="single-icon">
+                                <i class="ti-mobile" aria-hidden="true" style="color:#B20CD7;"></i>
+                            </div>
+                            <h4 style=" color: #0C96D7;">Tu auto siempre limpio desde la comodidad de tu casa u oficina.</h4>
 
-                </body>
-                </html>
+                        </div>
+                    </div>
+                    <!-- Single Special Area -->
+                    <div class="col-12 col-md-4">
+                        <div class="single-special text-center wow fadeInUp" data-wow-delay="0.8s">
+                            <div class="single-icon" >
+                                <i  class="ti-ruler-pencil" aria-hidden="true" style="color: #0E7FB3;"></i>
+                            </div>
+                            <h4 style=" color: #0C96D7;">Contribuyes al cuidado del agua.</h4>
+
+                        </div>
+                    </div>
+                    <!-- Single Special Area -->
+                    <div class="col-12 col-md-4">
+                        <div class="single-special text-center wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="single-icon">
+                                <i class="ti-settings" aria-hidden="true" style="color: #0E7FB3;"></i>
+                            </div>
+                            <h4 style=" color: #0C96D7;">Ahorras tiempo y dinero.</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Special Description Area -->
+            <div class="special_description_area mt-150">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="special_description_content">
+                                <h2 style="font-size: 30px; color: #0C96D7;">CarClean es una empresa 100% Mexicana que nació con la finalidad de contribuir al cuidado del agua,  tiempo y ahorro de combustible brindando el más optimizado y revolucionado lavado de auto ecológico a domicilio.</h2>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="row">                        
+                        <div class="col-lg-6">
+                            <div class="special_description_img">
+                                <img src="https://static.wixstatic.com/media/8491cd_cf9b081686d841158f74392ae824cea8.png_srz_1382_659_85_22_0.50_1.20_0.00_png_srz" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-5 ml-xl-auto">
+                            <div class="special_description_content">                                
+                                <p>Misión: Brindar el mejor servicio de auto lavado ecológico a domicilio, no desperdiciar agua, utilizar el negocio para inspirar e implementar soluciones para el problema ambiental.</p>
+                                <p>Visión: Ser la empresa de auto lavado ecológico a domicilio preferido de todos. </p>
+                                <p>Valores: Transparencia,  Trabajo en equipo, Responsabilidad, Lealtad, Honestidad, Confianza y seguridad.</p>
+                                <div class="app-download-area">
+                                    <div class="app-download-btn wow fadeInUp" data-wow-delay="0.2s">
+                                        <!-- Google Store Btn -->
+                                        <a href="#">
+                                            <i class="fa fa-android"></i>
+                                            <p class="mb-0"><span>available on</span> Google Store</p>
+                                        </a>
+                                    </div>
+                                    <div class="app-download-btn wow fadeInDown" data-wow-delay="0.4s">
+                                        <!-- Apple Store Btn -->
+                                        <a href="#">
+                                            <i class="fa fa-apple"></i>
+                                            <p class="mb-0"><span>available on</span> Apple Store</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Special Area End ***** -->
+
+        <!-- ***** Awesome Features Start ***** -->
+        <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="BENEFICIOS">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Heading Text -->
+                        <div class="section-heading text-center">
+                            <h2 style="color: #0C96D7;">Beneficios</h2>
+                            <div class="line-shape"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Single Feature Start -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-feature">
+                            <i class="ti-user" aria-hidden="true"></i>
+                            <h5 style="color: #0C96D7;">¡PERFECTO SERVICIO!</h5>
+                            <p>Cuando su auto ya esté en nuestras manos, todo lo que tendrá que hacer es esperar un poco hasta que quede todo brillante y limpio.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Single Feature Start -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-feature">
+                            <i class="ti-pulse" aria-hidden="true"></i>
+                            <h5 style="color: #0C96D7;">¡ACUMULA 10 LAVADAS Y LA SIGUIENTE ES GRATIS!</h5>
+                            <p>Por cada 10 servicios pagados, CARCLEAN te regala un servicio totalmente gratis.</p>
+                        </div>
+                    </div>
+                    <!-- Single Feature Start -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-feature">
+                            <i class="ti-dashboard" aria-hidden="true"></i>
+                            <h5 style="color: #0C96D7;">¡OBTEN UN DESCUENTO EN TU PRIMER SERVICIO!</h5>
+                            <p>Solo regístrate con Facebook o tu correo electrónico y recibe un descuento en tu primera lavada.</p>
+                        </div>
+                    </div>
+                    <!-- Single Feature Start -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-feature">
+                            <i class="ti-palette" aria-hidden="true"></i>
+                            <h5 style="color: #0C96D7;">PLAN CARCLEAN</h5>
+                            <p>Con CARCLEAN podrá programar las lavadas de tu vehículo de todo un mes, así tendrás siempre tu coche limpio a la hora que lo necesites.</p>
+                        </div>
+                    </div>
+                    <!-- Single Feature Start -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-feature">
+                            <i class="ti-crown" aria-hidden="true"></i>
+                            <h5 style="color: #0C96D7;">¡PRECIOS INCREÍBLES!</h5>
+                            <p>Con todos nuestros servicios siendo realmente de primera categoría, aquí también está la última alegría. ¡El mejor precio!</p>
+                        </div>
+                    </div>
+                    <!-- Single Feature Start -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-feature">
+                            <i class="ti-headphone" aria-hidden="true"></i>
+                            <h5 style="color: #0C96D7;">¡AYUDAS AL CUIDADO DEL AGUA!</h5>
+                            <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ***** Awesome Features End ***** -->
+
+        <!-- ***** Video Area Start ***** -->
+        <div class="video-section" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Video Area Start -->
+                        <div class="video-area" style="background-image: url(http://hogaressauce.com.mx/wp-content/uploads/2015/08/microfibra1-e1459199620289.jpg);">
+                            <div class="video-play-btn">
+                                <a href="https://www.youtube.com/watch?v=ClPqIZxcrpw" class="video_btn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Video Area End ***** -->
+
+        <!-- ***** Cool Facts Area Start ***** -->
+        <section class="cool_facts_area " style="background-color: #0C96D7!important;">
+            <div class="container" >
+                <div class="row">                                      
+                    <!-- Single Cool Fact-->
+                    <div class="col-12 col-md-4 col-lg-4" >
+                        <div class="single-cool-fact d-flex justify-content-center wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="counter-area">
+                                <h3><span class="counter">120</span></h3>
+                            </div>
+                            <div class="cool-facts-content">
+                                <i class="ion-happy-outline"></i>
+                                <p>Clientes <br> Felices</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Cool Fact-->
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="single-cool-fact d-flex justify-content-center wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="counter-area">
+                                <h3><span class="counter">40</span></h3>
+                            </div>
+                            <div class="cool-facts-content">
+                                <i class="ion-person"></i>
+                                <p>Cuentas <br>Activas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Cool Fact-->
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="single-cool-fact d-flex justify-content-center wow fadeInUp" data-wow-delay="0.8s">
+                            <div class="counter-area">
+                                <h3><span class="counter">10</span></h3>
+                            </div>
+                            <div class="cool-facts-content">
+                                <i class="ion-ios-star-outline"></i>
+                                <p>Total <br>Aps</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Cool Facts Area End ***** -->
+
+        <!-- ***** App Screenshots Area Start ***** -->
+        <section class="app-screenshots-area bg-white section_padding_0_100 clearfix" id="comofunciona">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <!-- Heading Text  -->
+                        <div class="section-heading">
+                            <h2 style="color: #0C96D7;">¿Como funciona?</h2>
+                            <div class="line-shape"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- App Screenshots Slides  -->
+                        <div class="app_screenshots_slides owl-carousel">
+                            <div class="single-shot">
+                                <img src="img/scr-img/app-1.jpg" alt="">
+                            </div>
+                            <div class="single-shot">
+                                <img src="img/scr-img/app-2.jpg" alt="">
+                            </div>
+                            <div class="single-shot">
+                                <img src="img/scr-img/app-3.jpg" alt="">
+                            </div>
+                            <div class="single-shot">
+                                <img src="img/scr-img/app-4.jpg" alt="">
+                            </div>
+                            <div class="single-shot">
+                                <img src="img/scr-img/app-5.jpg" alt="">
+                            </div>
+                            <div class="single-shot">
+                                <img src="img/scr-img/app-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** App Screenshots Area End *****====== -->
+
+        <!-- ***** Pricing Plane Area Start *****==== -->
+        <section class="pricing-plane-area section_padding_100_70 clearfix" id="servicios">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Heading Text  -->
+                        <div class="section-heading text-center">
+                            <h2 style="color: #0C96D7;">Servicios</h2>
+                            <div class="line-shape"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-8 col-lg-4">
+                        <!-- Package Price  -->
+                        <div class="single-price-plan  active text-center">
+                            <!-- Package Text  -->
+                            <div class="package-plan" style="background-color: #0C96D7;">
+                                <h5> EXPRESS </h5>
+                                <div class=" d-flex justify-content-center">                                
+                                    <h4 style="font-size: 20px;"><span>$</span>69.00 Auto/SUV</h4>                                                                    
+                                </div>
+                                <div class=" d-flex justify-content-center">                                
+
+                                    <h4 style="font-size: 20px;"><span>$</span>85.00 Camioneta grande/Pick Up</h4>
+
+                                </div>
+                            </div>
+                            <div class="package-description">
+                                <p>Lavado de exterior.</p>
+                                <p>Limpieza de neumáticos.</p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                            </div>
+                            <!-- Plan Button  -->
+                            <div class="plan-button" >
+                                <a href="#" style="background-color: #0C96D7;">Seleccionar Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-4">
+                        <!-- Package Price  -->
+                        <div class="single-price-plan  active text-center " >
+                            <!-- Package Text  -->
+                            <div class="package-plan" style="background-color: #0C96D7;">
+                                <h5>MEDIO</h5>
+                                <div class=" d-flex justify-content-center">                                      
+                                    <h4 style="font-size: 20px;"><span>$</span>99 Auto/SUV</h4>                                    
+                                </div>
+                                <div class=" d-flex justify-content-center">                                      
+                                    <h4 style="font-size: 20px;"><span>$</span>119 Camioneta Grande/Pick Up</h4>                                    
+                                </div>
+                            </div>
+                            <div class="package-description">
+                                <p>Lavado de exterior</p>
+                                <p>Aspirado de interiores</p>
+                                <p>Aspirado de cajuela</p>
+                                <p>Limpieza de neumáticos</p>
+
+                            </div>
+                            <!-- Plan Button  -->
+                            <div class="plan-button" >
+                                <a href="#" style="background-color: #0C96D7;">Seleccionar Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-4">
+                        <!-- Package Price  -->
+                        <div class="single-price-plan active text-center">
+                            <!-- Package Text  -->
+                            <div class="package-plan"style="background-color: #0C96D7;">
+                                <h5>Completo</h5>
+                                <div class="d-flex justify-content-center">
+                                    <span>$</span>
+                                    <h4 style="font-size: 20px;">129.00 Auto/SUV</h4>
+                                </div>
+                                <div class="d-flex justify-content-center">
+
+                                    <h4 style="font-size: 20px;"><span>$</span>139.00 Camioneta Grande/Pick Up</h4>
+                                </div>
+                            </div>
+                            <div class="package-description">
+                                <p>Lavado de exterior</p>
+                                <p>Aspirado de cajuela</p>
+                                <p>Aspirado de interiores</p>
+                                <p>Limpieza de neumáticos</p>
+                                <p>Aplicación de cera abrillantadora.</p>
+                            </div>
+                            <!-- Plan Button  -->
+                            <div class="plan-button" >
+                                <a href="#" style="background-color: #0C96D7;">Seleccionar Plan</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ***** Pricing Plane Area End ***** -->       
+        <!-- ***** Our Team Area Start ***** -->
+        <section class="our-Team-area bg-white section_padding_100_50 clearfix" id="VENTAJAS">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <!-- Heading Text  -->
+                        <div class="section-heading">
+                            <h2 style="color: #0C96D7;">Ventajas</h2>
+                            <div class="line-shape"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="single-team-member">
+                            <div class="member-image">
+                                <img src="img/team-img/team-2.jpg" alt="">
+                                <div class="team-hover-effects">
+                                    <div class="team-social-icon">
+                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-text">
+                                <h4 style="color: #0C96D7;">En cualquier lugar</h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="single-team-member">
+                            <div class="member-image">
+                                <img src="img/team-img/team-3.jpg" alt="">
+                                <div class="team-hover-effects">
+                                    <div class="team-social-icon">
+                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-text">
+                                <h4 style="color: #0C96D7;">Cualquier tipo de auto</h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="single-team-member">
+                            <div class="member-image">
+                                <img src="img/team-img/team-4.jpg" alt="">
+                                <div class="team-hover-effects">
+                                    <div class="team-social-icon">
+                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-text">
+                                <h4 style="color: #0C96D7;">Precios accesibles</h4>                                
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="single-team-member">
+                            <div class="member-image">
+                                <img src="img/team-img/team-1.jpg" alt="">
+                                <div class="team-hover-effects">
+                                    <div class="team-social-icon">
+                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-text">
+                                <h4 style="color: #0C96D7;">Comodidad</h4>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="single-team-member">
+                            <div class="member-image">
+                                <img src="img/team-img/team-1.jpg" alt="">
+                                <div class="team-hover-effects">
+                                    <div class="team-social-icon">
+                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-text">
+                                <h4 style="color: #0C96D7;">Seguro y confiable</h4>                                
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-12 col-md-6 col-lg-3">
+                        <div class="single-team-member">
+                            <div class="member-image">
+                                <img src="img/team-img/team-1.jpg" alt="">
+                                <div class="team-hover-effects">
+                                    <div class="team-social-icon">
+                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-text">
+                                <h4 style="color: #0C96D7;">Rapidez</h4>                                
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-12 col-md-6 col-lg-3">
+                        <div class="single-team-member">
+                            <div class="member-image">
+                                <img src="img/team-img/team-1.jpg" alt="">
+                                <div class="team-hover-effects">
+                                    <div class="team-social-icon">
+                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-text">
+                                <h4 style="color: #0C96D7;">Cuidado del planeta</h4>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="single-team-member">
+                            <div class="member-image">
+                                <img src="img/team-img/team-1.jpg" alt="">
+                                <div class="team-hover-effects">
+                                    <div class="team-social-icon">
+                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-text">
+                                <h4 style="color: #0C96D7;">La mejor calidad</h4>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Our Team Area End ***** -->
+
+        <!-- ***** Contact Us Area Start ***** -->
+        <section class="footer-contact-area section_padding_100 clearfix" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Heading Text  -->
+                        <div class="section-heading">
+                            <h2 style="color: #0C96D7;">Contactanos</h2>
+                            <div class="line-shape"></div>
+                        </div>
+                        <div class="footer-text">
+                            <p>We'll send you epic weekly blogs, whitepapers and things to make your app startup thrive, all FREE!</p>
+                        </div>
+                        <div class="address-text" style="color: #0C96D7;">
+                            <p><span style="color: #0C96D7;">DIRECCION:</span> 40 Baria Sreet 133/2 NewYork City, US</p>
+                        </div>
+                        <div class="phone-text" style="color: #0C96D7;">
+                            <p><span style="color: #0C96D7;">TELEFONO:</span> +52-238-102-37-60</p>
+                        </div>
+                        <div class="email-text" style="color: #0C96D7;">
+                            <p><span style="color: #0C96D7;">E-mail:</span> carclean@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Form Start-->
+                        <div class="contact_from">
+                            <form action="#" method="post">
+                                <!-- Message Input Area Start -->
+                                <div class="contact_input_area">
+                                    <div class="row">
+                                        <!-- Single Input Area Start -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="NOMBRE" required>
+                                            </div>
+                                        </div>
+                                        <!-- Single Input Area Start -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="email" id="email" placeholder=" E-mail" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="TELEFONO" required>
+                                            </div>
+                                        </div>
+                                        <!-- Single Input Area Start -->
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="MENSAJE" required></textarea>
+                                            </div>
+                                        </div>
+                                        <!-- Single Input Area Start -->
+                                        <div class="col-12">
+                                            <button type="submit" class="btn submit-btn">ENVIAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Message Input Area End -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Contact Us Area End ***** -->
+
+        <!-- ***** Footer Area Start ***** -->
+        <footer class="footer-social-icon text-center section_padding_70 clearfix">
+            <!-- footer logo -->
+            <div class="footer-text">
+                <h2 style="color: #0C96D7;">CARCLEAN</h2>
+            </div>
+            <!-- social icon-->
+            <div class="footer-social-icon">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            </div>
+            
+            <!-- Foooter Text-->
+            <div class="copyright-text">
+                <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
+                <p>Copyright ©2018 CARCLEAN </p>
+            </div>
+        </footer>
+        <!-- ***** Footer Area Start ***** -->
+
+        <!-- Jquery-2.2.4 JS -->
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <!-- Popper js -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap-4 Beta JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- All Plugins JS -->
+        <script src="js/plugins.js"></script>
+        <!-- Slick Slider Js-->
+        <script src="js/slick.min.js"></script>
+        <!-- Footer Reveal JS -->
+        <script src="js/footer-reveal.min.js"></script>
+        <!-- Active JS -->
+        <script src="js/active.js"></script>
+    </body>
+
+</html>
