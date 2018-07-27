@@ -148,6 +148,7 @@ $controlador = new controladorAdministracion();
                     <form method="post" action="clientes.php" enctype="multipart/form-data">
                         <div class="modal-body ">
                             <input type="hidden" name="agregarCliente"  value="1">
+                            
                             <div class="form-group">
                                 <label for="name" class="col-form-label" >Nombre Completo:</label>
                                 <input required="" type="text"   value="" id="wNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
@@ -289,8 +290,8 @@ $controlador = new controladorAdministracion();
         </div>
 
     </body>
-       <script src="../../controlador/controlador-administracion/delete.js" type="text/javascript"></script>
-    <script src="../../controlador/controlador-administracion/consultas.js" type="text/javascript"></script>
+    <script src="../../controlador/controlador-administracion/js/delete.js" type="text/javascript"></script>
+    <script src="../../controlador/controlador-administracion/js/update.js" type="text/javascript"></script>
     <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
     <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="assets/js/chartist.min.js"></script>
