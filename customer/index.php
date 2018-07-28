@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php
+session_start(); //Es llamada cuando se inicia una sesión
+include_once '../modelo/BD.php';/** se incluye la conexipon a la BD */
+include_once '../controlador/controlador-pagina/controlador-pagina.php';/** se incluye el controlador */
+include_once '../modelo/modelo-pagina/modelo-pagina.php';/** se incluye el modelo */
+/**
+  INICIALIZA CONTROLADOR
+ */
+$FE = new controladorPagina();
+?><!DOCTYPE html>
 <html lang="es">
     <head>
       <title>Inicio de Sesión</title>
@@ -16,7 +25,8 @@
             <div class="container-login100" style="background-image: url('https://ideasdenegocios.net/wp-content/uploads/2018/04/negocio-lavado-auto.png');">
                 <!--Inicia el recuadro de login-->
                 <div class="content cuadro col-md-4">
-                <form>
+                    <form method="post" action="index.php">
+                        
                     <div class="form-group" >
                         <center>
                             <img src="../assets/images/administracion/logo.png" style="width: 7rem;">
@@ -26,16 +36,16 @@
                     </div>
                     <div class="form-group col-md-12">
                         <label class="col-form-label">Nombre de usuario o email: </label>
-                        <input type="text" name="usuario" class="form-control" id="user" aria-describedby="emailHelp" placeholder="User or email" required="">
+                        <input type="text" name="email" class="form-control" id="user" aria-describedby="emailHelp" placeholder="User or email" required="">
                     </div>
                     <div class="form-group col-md-12">
                         <label class="col-form-label">Contraseña:</label>
-                        <input type="password" name="contraseña" class="form-control" id="password" placeholder="Password" required="">
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Password" required="">
                     </div>
 
                     <div class="form-group col-md-12 ">
                         <center>
-                    <button  type="button" class="btn btn-primary" onclick="location.href = 'account/profile.html'">Entrar</button>
+                            <button  type="submit" class="btn btn-primary">Entrar</button>
                         </center>
                         <center>
                             <label class="col-form-label">¿No tienes una cuenta? <a href="register.php" style="color: #0370CB;font-family: sans-serif;"><h5>Crear una</h5></a></label>
