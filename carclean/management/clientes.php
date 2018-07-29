@@ -149,26 +149,34 @@ $controlador = new controladorAdministracion();
                         <div class="modal-body ">
                             <input type="hidden" name="agregarCliente"  value="1">
                             
+                            
                             <div class="form-group">
                                 <label for="name" class="col-form-label" >Nombre Completo:</label>
                                 <input required="" type="text"   value="" id="wNombre"  name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
                             <div class="form-group">
-                                <label for="name" class="col-form-label" >Apellidos:</label>
-                                <input required="" type="text"   value="" id="wNombre"  name="apellidos"  class="form-control" aria-describedby="sizing-addon3" >
+                                <label for="name" class="col-form-label" >Email:</label>
+                                <input required="" type="email"   value="" id="wNombre"  name="email"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
                             <div class="form-group">
-                                <label for="year old" class="col-form-label">Email</label>
-                                <input required="" type="email"   value="" id="wNacimiento"  name="email"  class="form-control" aria-describedby="sizing-addon3" >
+                                <label for="year old" class="col-form-label">Contraseña</label>
+                                <input required="" type="password"   value="" id="wPassword"  name="password"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
-                            <div class="form-group col-lg-6">
+                            <div class="form-group">
                                 <label for="telefone" class="col-form-label">Teléfono:</label>
-                                <input required="" type="tel"   value="" id="wTelefono"  name="telefono"  class="form-control" aria-describedby="sizing-addon3" >
+                                <input required="" type="text"   value="" id="wTelefono"  name="telefono"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
-                            <div class="form-group col-lg-6" >
-                                <label for="email" class="col-form-label">Fecha:</label>
-                                <input required="" type="date"   value="" id="idNombre"  name="fecha"  class="form-control" aria-describedby="sizing-addon3" >
-                            </div> 
+                             <div class="form-group">
+                                <label for="validationTooltip03">Estado</label>
+                                <select class="custom-select" name="estado">
+                                    <option selected>Selecciona tu estado</option>
+                                    <option value="1">Puebla</option>
+                                    <option value="2">Querétaro</option>
+                                    <option value="3">Jalisco</option>
+                                </select>
+                                
+                            </div>
+                           
                         </div>
                         <div class="modal-footer ">
                             <input type="submit"   value="Aceptar" class="btn btn-success">
@@ -244,8 +252,8 @@ $controlador = new controladorAdministracion();
                             </div>
 
                             <div class="form-group">
-                                <label for="" class="col-form-label">Apellidos:</label>
-                                <input required="" type="text" value="" id="cApellidos" name="apellidos" class=" form-control" aria-describedby="sizing-addon3">
+                                <label for="" class="col-form-label">Nueva Contraseña:</label>
+                                <input required="" type="password" value="" id="cPass" name="password" class=" form-control" aria-describedby="sizing-addon3">
                             </div>
                             <div class="form-group ">
                                 <label for="proveedor" class="col-form-label">Email:</label>

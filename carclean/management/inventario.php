@@ -105,8 +105,9 @@ $controlador = new controladorAdministracion();
                                 <table class="table table-hover table-striped">
                                     <thead>
                                     <th>ID</th>
-                                    <th>Producto</th>
-                                    <th>Cantidad</th>
+                                    <th>Nombre del Producto</th>
+                                    <th>Tipo De Producto</th>
+                                    <th>Modo de Empleo</th>
                                     <th>Proveedor</th>
                                     </thead>
                                     <tbody>
@@ -147,16 +148,20 @@ $controlador = new controladorAdministracion();
                         <div class="modal-body">
                             <input type="hidden" name="agregarInventario" value="1">
                             <div class="form-group">
-                                <label for="name" class="col-form-label">Nombre Prodcuto:</label>
-                                <input required="" type="text"   value=""   name="name"  class="form-control" aria-describedby="sizing-addon3" >
+                                <label for="name" class="col-form-label">Nombre Producto:</label>
+                                <input required="" type="text"   value=""   name="nombre"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
                             <div class="form-group ">
-                                <label for="proveedor" class="col-form-label">Proveedor:</label>
-                                <input required=""  type="text"  name="proveedor"  class="form-control" aria-describedby="sizing-addon3">
+                                <label for="proveedor" class="col-form-label">Tipo Producto:</label>
+                                <input  type="text"  name="tipo_producto"  class="form-control" aria-describedby="sizing-addon3">
                             </div>
                             <div class="form-group ">
-                                <label for="canridad" class="col-form-label">Cantidad:</label>
-                                <input required=""  type="text"  name="cantidad" class="form-control" aria-describedby="sizing-addon3">
+                                <label for="proveedor" class="col-form-label">Modo Empleo:</label>
+                                <textarea  type="text"  name="modo_empleo"  class="form-control" aria-describedby="sizing-addon3"></textarea>
+                            </div>
+                            <div class="form-group ">
+                                <label for="canridad" class="col-form-label">Proveedor:</label>
+                                <input required=""  type="text"  name="proveedor" class="form-control" aria-describedby="sizing-addon3">
                             </div>
                             <div class="form-group">
                                 <label for="">imagen</label>
@@ -193,7 +198,7 @@ $controlador = new controladorAdministracion();
                         </button>
                         <p style="color: black;">Modificar Producto  <i class="pe-7s-tools"></i></p>
                     </div>
-                    <form method="post" action="inventario.php">
+                    <form method="post" action="inventario.php" enctype="multipart/form-data">
                     <div class="modal-body">
                             <input type="hidden" name="modificarInventario"  value="1">
                             <input type="hidden" name="idProducto" id="idProducto" value="">
@@ -202,48 +207,61 @@ $controlador = new controladorAdministracion();
                                     <label for="name" class="col-form-label">Nombre del producto:</label>
                                     <input required="" type="text"  id="pNombre"  name="name"  class="form-control" aria-describedby="sizing-addon3" >
                                 </div>
+                            
+                             <div class="form-group">
+                                    <label for="name" class="col-form-label">Tipo Producto:</label>
+                                    <input required="" type="text"  id="pTipo"  name="tipoProducto"  class="form-control" aria-describedby="sizing-addon3" >
+                                </div>
+                            
+                             <div class="form-group">
+                                    <label for="name" class="col-form-label">Modo de Empleo:</label>
+                                    <textarea required="" type="text"  id="pEmpleo"  name="modoEmpleo"  class="form-control" aria-describedby="sizing-addon3" ></textarea>
+                                </div>
                             <div class="form-group ">
                                 <label for="proveedor" class="col-form-label">Proveedor:</label>
                                     <input required=""  type="text"  name="proveedor" id="pProveedor" class="form-control" aria-describedby="sizing-addon3">
                                     </div>
                             <div class="form-group ">
-                                <label for="cantidad" class="col-form-label">Cantidad:</label>
-                                    <input required=""  type="text"  name="cantidad" id="pCantidad" class="form-control" aria-describedby="sizing-addon3">
-                                    </div>
+                                <label for="" class="col-form-label btn btn-default center-block">
+                                    Subir Archivo
+                                    <input class="btn btn-file form-control" type="file"   name="imagen"> 
+                                </label>
                              </div>
                               <div class="modal-footer" >   
                                 <input type="submit"   value="Aceptar" class="btn btn-success">
                                 <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
                             </div>
-                      </form>
+                     
                     </div>
+                    </form>
                 </div>
             </div>
     <!--Codigo para la ventana emergente de eliminar-->
     <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header" style="background: #DF3C04;  ">
+                    <div class="modal-header" style="background: #C80000  ;  ">
                         <button type="button" style="color: #ffffff;" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <p style="color: #ffffff;">Eliminar Producto  <i class="pe-7s-trash"></i></p>
+                        <p style="color: #ffffff;">Eliminar Producto  <i class="pe-7s-delete-user"></i></p>
                     </div>
-                    <div class="modal-body">
-                        <form method="post" action="inventario.php">
-                             <input type="hidden" name="eliminarInventario"  value="1">
-                            <input type="hidden" name="idProducto" id="idP" value="">
+                    <form method="post" action="clientes.php">
+                        <div class="modal-body">
+                            <input type="hidden" name="eliminarInventario"  value="1">
+                            <input type="hidden" name="idProducto" id="idP">
                             <p>¿Desea realmente eliminar este producto?</p>
-                                 <div class="modal-footer" >   
+                            <div class="modal-footer" >   
                                 <input type="submit"   value="Aceptar" class="btn btn-success">
                                 <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
-                                </div>
-                    </div>
-                            </form>
+                            </div>
+                        </div>
+                         </form>
                 </div>
             </div>
         </div>
 </body>
+<script src="../../controlador/controlador-administracion/js/funcion-img.js"></script>
 <script src="../../controlador/controlador-administracion/js/delete.js" type="text/javascript"></script>
 <script src="../../controlador/controlador-administracion/js/update.js" type="text/javascript"></script>
 <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
