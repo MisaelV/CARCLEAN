@@ -20,7 +20,7 @@ $controlador = new controladorPagina();
         <title>Carclean</title>
 
         <!-- Favicon -->
-        <link rel="icon" href="assets/images/administracion/logo.png">
+        <link rel="icon" href="img/blanco1.png">
 
         <!-- Core Stylesheet -->
         <link href="style.css" rel="stylesheet">
@@ -44,8 +44,7 @@ $controlador = new controladorPagina();
                     <div class="col-12 col-lg-10">
                         <div class="menu_area">
                             <nav class="navbar navbar-expand-lg navbar-light" >
-                                <!-- Logo -->
-                                <a class=" " href="#" ><h4 class="nav-link">Carclean</h4></a>
+                                <img src="img/blanco1.png" style="width:7%; height: 15%;"> 
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                                 <!-- Menu Area -->
                                 <div class="collapse navbar-collapse" id="ca-navbar">
@@ -85,20 +84,25 @@ $controlador = new controladorPagina();
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="carousel-caption d-none d-block well">
-                        
+                    <div class="carousel-caption d-none d-block well">           
+                        FÁCIL, RÁPIDO Y DE ALTA CALIDAD!
                     </div>
-                    <img class="d-block w-100" src="https://m.mercedes-benz.com.mx/content/media_library/hq/hq_mpc_reference_site/passenger_cars_ng/mobile/mbp/new_cars/models/sl-class/r231/03-2016/mercedes-benz-sl-r231_modeloverview_814x383_03-2016_jpg.object-Single-MEDIA.tmp/mercedes-benz-sl-r231_modeloverview_814x383_03-2016.jpg" alt="First slide">
-
-
+               <img class="d-block w-100" src="img/Diapositiva1.JPG ">
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="https://m.mercedes-benz.com.mx/content/media_library/hq/hq_mpc_reference_site/passenger_cars_ng/mobile/mbp/new_cars/models/mercedes_amg_gt/coupe_c_190/04-2017/mercedes-benz-amg-gt-c190_mbp_modeloverview_814x383_04-2017_jpg.object-Single-MEDIA.tmp/mercedes-benz-amg-gt-c190_mbp_modeloverview_814x383_04-2017.jpg" alt="Second slide">
-
-
+                 <div class="carousel-item">
+                    <img class="d-block w-100" src="img/Diapositiva2.JPG ">
+                     <div class="carousel-caption d-none d-block well">               
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="https://m.mercedes-benz.com.pa/content/media_library/hq/hq_mpc_reference_site/passenger_cars_ng/mobile/mbp/new_cars/modeloverview/05-2014/mercedes-benz-cls-class-x218_modeloverview_814x383_05-2014_jpg.object-Single-MEDIA.tmp/mercedes-benz-cls-class-x218_modeloverview_814x383_05-2014.jpg" alt="Third slide">
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="img/Diapositiva3.JPG ">
+                     <div class="carousel-caption d-none d-block well">               
+                    </div>
+                </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="img/Diapositiva4.JPG ">
+                </div>  <div class="carousel-item">
+                    <img class="d-block w-100" src="img/Diapositiva5.JPG ">
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

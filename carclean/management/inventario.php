@@ -156,7 +156,7 @@ $controlador = new controladorAdministracion();
                             </div>
                             <div class="form-group ">
                                 <label for="canridad" class="col-form-label">Cantidad:</label>
-                                <input required=""  type="text"  name="cantidad" class="form-control" aria-describedby="sizing-addon3">
+                                <textarea required=""    name="cantidad" class="form-control"  aria-describedby="sizing-addon3"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="">imagen</label>
