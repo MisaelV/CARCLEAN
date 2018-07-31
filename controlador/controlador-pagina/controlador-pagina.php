@@ -18,16 +18,18 @@ class controladorPagina extends BD {
     public function __construct() {
     $this->modelo= new modeloPagina();
     
-    if(isset($_POST['agregarUsuario'])){
-        $nombre=$_POST['nombre'];
-        $email=$_POST['email'];
-        $password= md5($_POST['password']);
-        $estado=$_POST['estado'];
-        $telefono=$_POST['telefono'];
-        $this->modelo->agregarRegistro($nombre, $email, $password, $estado, $telefono);
-        header("location:index.php");
+   if(isset($_POST['agregarUsuario'])){
+       $nombre= $_POST['nombre'];
+       $email= $_POST['email'];
+       $password= md5($_POST['password']);
+       $estado= $_POST['estado'];
+       $telefono= $_POST['telefono'];
+       
+       $this->modelo->agregarRegistro($nombre, $email, $password, $estado, $telefono);
+       header('location:index.php');
+       
         
-    }
+   }
     
     }
     
@@ -43,8 +45,7 @@ class controladorPagina extends BD {
             //SI EXISTE MI USUARIO EN LA BASE DE DATOS ME LO VERIFICA
             if(isset($email)){
                 $_SESSION['email']= $email;
-                header("location:profile.html");
-                
+                echo "<script>alert('si entra al usuario')</script>";
             }
             
     }

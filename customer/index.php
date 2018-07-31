@@ -7,6 +7,7 @@ include_once '../modelo/modelo-pagina/modelo-pagina.php';/** se incluye el model
   INICIALIZA CONTROLADOR
  */
 $FE = new controladorPagina();
+echo $FE->autentificarUsuario();
 ?><!DOCTYPE html>
 <html lang="es">
     <head>
@@ -17,7 +18,7 @@ $FE = new controladorPagina();
         <link rel="stylesheet" type="text/css" href="../carclean/management/assets/css/util.css">
         <link rel="stylesheet" type="text/css" href="../carclean/management/assets/css/main.css">
         <link rel="stylesheet" type="text/css" href="../settings/style-web/css.css">
-                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
     </head>
     <body>

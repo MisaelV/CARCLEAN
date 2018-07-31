@@ -13,9 +13,9 @@
  */
 class BD {
     //conexion con base de datos
-    var $cadena = "mysql8.000webhost.com;dbname=id6628054_comicworl";  
-    var $user = "id6628054_root"; 
-    var $password = "root10";
+    var $cadena = "mysql:host=127.0.0.1;dbname=carclean";  
+    var $user = "root"; 
+    var $password = "";
     var $conn;
     var $depuracion = true;
     

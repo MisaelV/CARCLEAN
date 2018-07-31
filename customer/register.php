@@ -6,6 +6,8 @@ include_once '../modelo/modelo-pagina/modelo-pagina.php';/** se incluye el model
   INICIALIZA CONTROLADOR
  */
 $FE = new controladorPagina();
+
+
 ?>
 <html lang="es">
     <head>
@@ -31,10 +33,10 @@ $FE = new controladorPagina();
                         <h4 class="">Crea una cuenta</h4>
                     </center>
                     <form class="needs-validation" action="register.php" method="post">
-                        <input type="hidden" name="agregarUsuario">
+                        <input type="hidden" name="agregarUsuario" value="1">
                         <div class="form-row">
                             <div class="col-md-12 mb-6">
-                                <label for="name">Nombre Completo:</label>
+                                <label for="">Nombre Completo:</label>
                                 <div class="input-group">
                                     <input type="text" name="nombre" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
                                 </div>
@@ -83,7 +85,7 @@ $FE = new controladorPagina();
                         <br>
                         <div class="form-group col-lg-12 ">
                             <center>
-                                <button type="submit" class="btn btn-primary" >Registrarte</button>
+                                <input type="submit" class="btn btn-primary" values="Registrar">
                             </center>
                         </div>
                         <center>
@@ -94,6 +96,7 @@ $FE = new controladorPagina();
 
                 <!--Termina el recuadro de login-->
             </div>
+        </div>
             <!--Termina el cuerpo del contenido-->
             <div class="limpiar"></div>
 
