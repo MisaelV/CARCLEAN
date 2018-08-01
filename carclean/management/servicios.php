@@ -154,21 +154,19 @@ $controlador = new controladorAdministracion();
                                 <label for="name" class="col-form-label">Cliente:</label>
                                 <input required="" type="text"   value="" id="wNombre"  name="cliente"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
-                             <div class="form-group col-lg-12">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <label class="col-form-label">Automovil</label>
-                                    <select class="custom-control-indicator" name="estado">
-                                        <option selected >Selecciona el Automovil</option>
-                                    <option value="1"></option>
-                                    <option value="2"></option>
-                                    <option value="3"></option>
+                             <div class="form-group col-lg-6">
+                                <label for="grade" class="col-form-label">Automovil:</label>
+                                <select class="form-control" name="estado">
+                                    <option  selected="selected"></option>
+                                    <option ></option>
+                                    <option ></option>
+                                    <option ></option>
+                                    <option ></option>
+                                    <option ></option>
+                                    <option ></option>
                                 </select>
-                                </button>
-                               
                             </div>
-                            </div>
-                            <div class="form-group col-lg-12">
+                            <div class="form-group col-lg-6">
                                 <label for="year old" class="col-form-label">Direccion</label>
                                 <input required="" type="text"   value="" id="wNacimiento"  name="direccion"  class="form-control" aria-describedby="sizing-addon3" >
                             </div>
