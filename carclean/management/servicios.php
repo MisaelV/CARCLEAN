@@ -117,7 +117,7 @@ $controlador = new controladorAdministracion();
                                         <tbody>
                                            <?php
                                            echo $controlador->consultarServicios();
-                                           ?> 
+                                           ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -135,8 +135,8 @@ $controlador = new controladorAdministracion();
                 </footer>
         </div>
     </div>
-    <!--VENTANAS EMERGENTES--> 
-    
+    <!--VENTANAS EMERGENTES-->
+
     <!--Inicia modal agregar -->
     <div class="modal fade" id="modalAgregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -157,13 +157,96 @@ $controlador = new controladorAdministracion();
                              <div class="form-group col-lg-6">
                                 <label for="grade" class="col-form-label">Automovil:</label>
                                 <select class="form-control" name="estado">
-                                    <option  selected="selected"></option>
-                                    <option ></option>
-                                    <option ></option>
-                                    <option ></option>
-                                    <option ></option>
-                                    <option ></option>
-                                    <option ></option>
+                                  <option  selected="selected"></option>
+																	<option value="">Seleccionar...</option>
+																	<option value="abarth">Abarth</option>
+																	<option value="alfa-romeo">Alfa Romeo</option>
+																	<option value="alpina">Alpina</option>
+																	<option value="alpine">Alpine</option>
+																	<option value="ariel">Ariel</option>
+																	<option value="arrinera">Arrinera</option>
+																	<option value="artega">Artega</option>
+																	<option value="aston-martin">Aston Martin</option>
+																	<option value="audi">Audi</option>
+																	<option value="belumbury">Belumbury</option>
+																	<option value="bentley">Bentley</option>
+																	<option value="bmw">BMW</option>
+																	<option value="bugatti">Bugatti</option>
+																	<option value="byd">BYD</option>
+																	<option value="cadillac">Cadillac</option>
+																	<option value="carver">Carver</option>
+																	<option value="caterham">Caterham</option>
+																	<option value="chevrolet">Chevrolet</option>
+																	<option value="chrysler">Chrysler</option>
+																	<option value="citroen">Citroën</option>
+																	<option value="corvette">Corvette</option>
+																	<option value="cupra">CUPRA</option>
+																	<option value="dacia">Dacia</option>
+																	<option value="daihatsu">Daihatsu</option>
+																	<option value="dodge">Dodge</option>
+																	<option value="ds">DS</option>
+																	<option value="ferrari">Ferrari</option>
+																	<option value="fiat">Fiat</option>
+																	<option value="fisker">Fisker</option>
+																	<option value="ford">Ford</option>
+																	<option value="fornasari">Fornasari</option>
+																	<option value="gta">GTA</option>
+																	<option value="hennessey">Hennessey</option>
+																	<option value="honda">Honda</option>
+																	<option value="hummer">Hummer</option>
+																	<option value="hurtan">Hurtan</option>
+																	<option value="hyundai">Hyundai</option>
+																	<option value="infiniti">Infiniti</option>
+																	<option value="isuzu">Isuzu</option>
+																	<option value="jaguar">Jaguar</option>
+																	<option value="jeep">Jeep</option>
+																	<option value="kia">Kia</option>
+																	<option value="koenigsegg">Koenigsegg</option>
+																	<option value="ktm">KTM</option>
+																	<option value="lada">LADA</option>
+																	<option value="lamborghini">Lamborghini</option>
+																	<option value="lancia">Lancia</option>
+																	<option value="land-rover">Land Rover</option>
+																	<option value="lexus">Lexus</option>
+																	<option value="lotus">Lotus</option>
+																	<option value="mahindra">Mahindra</option>
+																	<option value="maserati">Maserati</option>
+																	<option value="maybach">Maybach</option>
+																	<option value="mazda">Mazda</option>
+																	<option value="mclaren">McLaren</option>
+																	<option value="melkus">Melkus</option>
+																	<option value="mercedes">Mercedes-Benz</option>
+																	<option value="mini">MINI</option>
+																	<option value="mitsubishi">Mitsubishi</option>
+																	<option value="morgan">Morgan</option>
+																	<option value="nissan">Nissan</option>
+																	<option value="opel">Opel</option>
+																	<option value="pagani">Pagani</option>
+																	<option value="peugeot">Peugeot</option>
+																	<option value="pgo">PGO</option>
+																	<option value="porsche">Porsche</option>
+																	<option value="renault">Renault</option>
+																	<option value="roding">Roding</option>
+																	<option value="rolls-royce">Rolls Royce</option>
+																	<option value="saab">Saab</option>
+																	<option value="santana">Santana</option>
+																	<option value="seat">SEAT</option>
+																	<option value="skoda">Skoda</option>
+																	<option value="smart">Smart</option>
+																	<option value="spyker">Spyker</option>
+																	<option value="ssangyong">SsangYong</option>
+																	<option value="subaru">Subaru</option>
+																	<option value="suzuki">Suzuki</option>
+																	<option value="tata">Tata</option>
+																	<option value="tazzari">Tazzari</option>
+																	<option value="tesla">Tesla</option>
+																	<option value="think">Think</option>
+																	<option value="toyota">Toyota</option>
+																	<option value="volkswagen">Volkswagen</option>
+																	<option value="volvo">Volvo</option>
+																	<option value="wiesmann">Wiesmann</option>
+																	<option value="w-motors">W-motors</option>
+																	<option value="zenvo">Zenvo</option>
                                 </select>
                             </div>
                             <div class="form-group col-lg-6">
@@ -177,11 +260,11 @@ $controlador = new controladorAdministracion();
                             <div class="form-group col-lg-5" >
                                 <label for="email" class="col-form-label">Lavador:</label>
                                 <input required="" type="text"   value="" id="idNombre"  name="lavador"  class="form-control" aria-describedby="sizing-addon3" >
-                            </div> 
+                            </div>
                              <div class="form-group col-lg-3" >
                                 <label for="email" class="col-form-label">Precio:</label>
                                 <input required="" type="text"   value="" id="idNombre"  name="precio"  class="form-control" aria-describedby="sizing-addon3" >
-                            </div> 
+                            </div>
                         </div>
                         <br>
                         <div class="modal-footer ">
@@ -239,7 +322,7 @@ $controlador = new controladorAdministracion();
                 </div>
             </div>
         </div>
-            
+
     <!--Codigo de la ventana emergente de eliminar-->
     <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -255,7 +338,7 @@ $controlador = new controladorAdministracion();
                             <input type="hidden" name="eliminarServicio"  value="1">
                             <input type="hidden" name="idServicio" id="idS" >
                                     <p>¿Desea realmente eliminar este servicio?</p>
-                                <div class="modal-footer" >   
+                                <div class="modal-footer" >
                                     <input type="submit"   value="Aceptar" class="btn btn-success">
                                     <input type="submit"   value="Cancelar" class="btn btn-primary" data-dismiss="modal" aria-label="Close" >
                                 </div>
